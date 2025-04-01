@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@utility booking-form {
+  @apply bg-white md:w-[66.66%] w-full h-full md:p-[48px] p-[24px] rounded-[clamp(16px,1.25vw,32px)];
+  box-shadow: 0 60px 70px 0 rgba(0, 15, 53, 0.149) !important;
+}
+
+@utility booking-form-header {
+  @apply md:text-[32px] text-[26px] font-[600] md:pr-[65px] pr-0 md:mb-[10px] mb-[10px] md:leading-[38px] leading-[32px];
+}
+
+@utility booking-banner-image {
+  box-shadow: 0 60px 70px 0 rgba(0, 15, 53, 0.149);
+}

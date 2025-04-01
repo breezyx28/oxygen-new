@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@media (min-width: 768px) {
+  .panel_content_grid:before {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.18) 49.15%,
+      transparent
+    );
+    content: "";
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%);
+    width: 1px;
+  }
+  .panel_content_grid:after {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(0, 0, 0, 0.18) 49.15%,
+      transparent
+    );
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}

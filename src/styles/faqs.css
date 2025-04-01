@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+.faq-row:nth-child(2n) {
+  @apply bg-black/5;
+}
