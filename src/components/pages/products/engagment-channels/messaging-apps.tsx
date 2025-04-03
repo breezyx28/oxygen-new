@@ -274,7 +274,7 @@ const MessagingAppCard = ({
   </div>
 );
 
-const DesignedFor = () => (
+export const DesignedFor = () => (
   <div className="pl-[90px] pr-[32px] py-[102px] rounded-[16px] border border-[#ffffff00] bg-[#ffffff1a] text-white">
     <div className="flex items-center gap-[32px]">
       <div className="content flex flex-col gap-[16px]">

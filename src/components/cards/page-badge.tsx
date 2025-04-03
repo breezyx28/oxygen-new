@@ -10,7 +10,7 @@ const PageBadge = ({ icon, text, className, textClass }: PageBadgeProps) => {
   return (
     <div
       className={twMerge(
-        "badge flex items-center gap-x-[8px] bg-gradient-to-r from-primary-100 to-transparent py-[6px] px-[10px] rounded-full",
+        "badge flex items-center gap-x-[8px] bg-gradient-to-r from-primary-50 to-transparent py-[6px] px-[10px] rounded-full",
         className
       )}
     >

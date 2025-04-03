@@ -6,6 +6,7 @@ import Layout from "./components/Layout/Layout";
 import PricingPageEnterprice from "./components/pages/pricing/enterprice/enterprice";
 import DigitalChannels from "./components/pages/products/engagment-channels/digital-channels";
 import MessagingApps from "./components/pages/products/engagment-channels/messaging-apps";
+import SocialMediaChannels from "./components/pages/products/engagment-channels/social-media-channels";
 
 const AppRouter: React.FC = () => {
   return (
@@ -22,6 +23,10 @@ const AppRouter: React.FC = () => {
             element={<DigitalChannels />}
           />
           <Route path="/products/messaging-apps" element={<MessagingApps />} />
+          <Route
+            path="/products/social-media-channels"
+            element={<SocialMediaChannels />}
+          />
         </Routes>
       </Layout>
     </Router>
