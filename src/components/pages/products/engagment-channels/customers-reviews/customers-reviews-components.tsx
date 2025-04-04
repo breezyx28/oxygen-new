@@ -1,4 +1,3 @@
-import Button from "@/components/buttons/button";
 import PageBadge from "@/components/cards/page-badge";
 import { Category } from "iconsax-react";
 

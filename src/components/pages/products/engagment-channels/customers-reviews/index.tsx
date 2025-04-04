@@ -3,22 +3,8 @@ import OutlineButton from "@/components/buttons/outline-button";
 import PageBadge from "@/components/cards/page-badge";
 import PartnersSlider from "@/components/sections/partners-slider";
 import TrustedBy from "@/components/sliders/trusted-by";
-import {
-  ArrowCircleUp2,
-  Graph,
-  Message,
-  Messages3,
-  Notification,
-  PresentionChart,
-  Profile2User,
-  Refresh,
-  Sms,
-  Star1,
-  TickCircle,
-  Ticket,
-} from "iconsax-react";
+import { Star1 } from "iconsax-react";
 import { SocialmediaCard } from "../social-media-channels/socialmedia-components";
-import { ManageSocialMedia } from "../digital-channels/digital-channels-components";
 import { useState } from "react";
 import SelectOptions from "@/components/inputs/select/select-options";
 import { twMerge } from "tailwind-merge";
