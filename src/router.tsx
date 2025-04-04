@@ -7,6 +7,7 @@ import PricingPageEnterprice from "./components/pages/pricing/enterprice/enterpr
 import DigitalChannels from "./components/pages/products/engagment-channels/digital-channels";
 import MessagingApps from "./components/pages/products/engagment-channels/messaging-apps";
 import SocialMediaChannels from "./components/pages/products/engagment-channels/social-media-channels";
+import CustomersReviews from "./components/pages/products/engagment-channels/customers-reviews";
 
 const AppRouter: React.FC = () => {
   return (
@@ -26,6 +27,10 @@ const AppRouter: React.FC = () => {
           <Route
             path="/products/social-media-channels"
             element={<SocialMediaChannels />}
+          />
+          <Route
+            path="/products/customers-reviews"
+            element={<CustomersReviews />}
           />
         </Routes>
       </Layout>
