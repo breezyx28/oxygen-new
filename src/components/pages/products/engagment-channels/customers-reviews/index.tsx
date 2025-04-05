@@ -3,12 +3,23 @@ import OutlineButton from "@/components/buttons/outline-button";
 import PageBadge from "@/components/cards/page-badge";
 import PartnersSlider from "@/components/sections/partners-slider";
 import TrustedBy from "@/components/sliders/trusted-by";
-import { Star1 } from "iconsax-react";
+import {
+  DirectInbox,
+  People,
+  PresentionChart,
+  Refresh,
+  Setting5,
+  Star1,
+  Tag,
+} from "iconsax-react";
 import { SocialmediaCard } from "../social-media-channels/socialmedia-components";
 import { useState } from "react";
 import SelectOptions from "@/components/inputs/select/select-options";
 import { twMerge } from "tailwind-merge";
-import { CustomersReviewsPanel } from "./customers-reviews-components";
+import {
+  CustomersReviewsFAQ,
+  CustomersReviewsPanel,
+} from "./customers-reviews-components";
 
 export default function CustomersReviews() {
   const [activeTab, setActiveTab] = useState("Location Reviews");
@@ -283,8 +294,147 @@ export default function CustomersReviews() {
         </div>
       </section>
 
-      {/* Last sections */}
-      <PartnersSlider />
+      <section className="bg-black w-full h-full">
+        <div className="container-container container-narrow w-full h-full flex flex-col justify-center gap-y-[72px]">
+          <h2 className="inline text-white text-[66px] text-center font-bold leading-[1.2]">
+            Work smarter – manage reviews{" "}
+            <span className="inline-block text-white/50">
+              with AI and automation
+            </span>
+          </h2>
+          <div className="relative h-[400px]">
+            <img
+              src="/assets/images/backgrounds/products/review-and-reputation-cta-block-backgorund.png"
+              className="absolute w-full h-full rounded-[32px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="relative min-h-screen">
+          <img
+            src="/assets/images/backgrounds/products/reviews-bg-cover.png"
+            className="absolute w-full h-full z-10"
+            alt=""
+          />
+          <div className="relative w-full h-full container-container container-narrow z-20">
+            <div className="content mb-[40px]">
+              <h3 className="text-white md:text-[58px] text-[32px] font-bold text-center leading-[1]">
+                Powerful features to manage reviews online – no PR firm
+                required.
+              </h3>
+            </div>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-[1rem]">
+              <SocialmediaCard
+                icon={
+                  <DirectInbox
+                    variant="Bold"
+                    size={32}
+                    className="text-black/30 mb-[10px]"
+                  />
+                }
+                title="All in one Inbox"
+                text={
+                  "See incoming reviews in real-time, all in a single interface."
+                }
+              />
+              <SocialmediaCard
+                icon={<Refresh size={32} className="text-black/30 mb-[10px]" />}
+                title="Read & Reply"
+                text={
+                  "Engage with your reviews right from the inbox in real time."
+                }
+              />
+              <SocialmediaCard
+                icon={
+                  <People
+                    variant="Bold"
+                    size={32}
+                    className="text-black/30 mb-[10px]"
+                  />
+                }
+                title="Intelligent Routing"
+                text={
+                  "Assign roles and route reviews to you or your team members as you see fit."
+                }
+              />
+              <SocialmediaCard
+                icon={
+                  <Tag
+                    variant="Bold"
+                    size={32}
+                    className="text-black/30 mb-[10px]"
+                  />
+                }
+                title="Review Tagging"
+                text={
+                  "Categorize reviews and create custom tags so its organized the way you want it."
+                }
+              />
+
+              <SocialmediaCard
+                icon={
+                  <Setting5
+                    variant="Bold"
+                    size={32}
+                    className="text-black/30 mb-[10px]"
+                  />
+                }
+                title="Advanced Filtering"
+                text={
+                  "Easily organize your inbox based on date/time, channel and other custom rules."
+                }
+              />
+              <SocialmediaCard
+                icon={
+                  <PresentionChart
+                    variant="Bold"
+                    size={32}
+                    className="text-black/30 mb-[10px]"
+                  />
+                }
+                title="Performance Monitoring"
+                text={
+                  "Measure the impact, monitor your team and turn insights into valuable business outcomes"
+                }
+              />
+            </div>
+
+            <div className="testimonial flex flex-col items-center gap-y-8 mt-[80px]">
+              <p className="text-white/70 text-[28px] text-center max-w-[700px]">
+                “We take our reputation seriously. Nextiva is the only solution
+                we trust to support us.”
+              </p>
+              <div className="flex items-center gap-[24px]">
+                <div className="user-img">
+                  <img
+                    src="/assets/images/avatars/eric.png"
+                    className="rounded-full w-[64px] h-[64px]"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-[20px] text-white/70 leading-[1.2]">
+                    Eric Siu
+                  </p>
+                  <p className="text-base text-white/50">
+                    Founder of Single Grain
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-container container-narrow">
+        <CustomersReviewsFAQ />
+      </section>
+
+      <section className="pb-[120px]">
+        <PartnersSlider />
+      </section>
     </>
   );
 }
