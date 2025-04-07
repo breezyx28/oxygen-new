@@ -8,6 +8,7 @@ import DigitalChannels from "./components/pages/products/engagment-channels/digi
 import MessagingApps from "./components/pages/products/engagment-channels/messaging-apps";
 import SocialMediaChannels from "./components/pages/products/engagment-channels/social-media-channels";
 import CustomersReviews from "./components/pages/products/engagment-channels/customers-reviews";
+import { LiveChat } from "./components/pages/products/engagment-channels/live-chat";
 
 const AppRouter: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const AppRouter: React.FC = () => {
             path="/products/customers-reviews"
             element={<CustomersReviews />}
           />
+          <Route path="/products/live-chat" element={<LiveChat />} />
         </Routes>
       </Layout>
     </Router>
