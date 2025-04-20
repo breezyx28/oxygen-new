@@ -9,6 +9,7 @@ import MessagingApps from "./components/pages/products/engagment-channels/messag
 import SocialMediaChannels from "./components/pages/products/engagment-channels/social-media-channels";
 import CustomersReviews from "./components/pages/products/engagment-channels/customers-reviews";
 import { LiveChat } from "./components/pages/products/engagment-channels/live-chat";
+import { BusinessVoip } from "./components/pages/products/engagment-channels/business-voip";
 
 const AppRouter: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const AppRouter: React.FC = () => {
           <Route path="/enterprice" element={<PricingPageEnterprice />} />
 
           {/* products routes */}
+          <Route path="/products/business-voip" element={<BusinessVoip />} />
           <Route
             path="/products/digital-channels"
             element={<DigitalChannels />}

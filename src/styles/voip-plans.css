@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@utility voip-plan-wrapper {
+  @apply relative overflow-hidden md:bg-white bg-transparent;
+  @apply w-full md:min-h-screen min-h-full;
+  @apply grid md:grid-cols-3 grid-cols-1 md:gap-0 gap-[16px];
+  @apply md:divide-x divide-x-0 md:border md:border-gray-400/20 border-none md:rounded-[24px];
+}
