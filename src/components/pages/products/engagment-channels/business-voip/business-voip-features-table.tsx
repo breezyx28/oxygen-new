@@ -220,7 +220,7 @@ const BusinessVoipFeatuesTable = () => {
               ({ title, d1, d2, d3, d4, d5 }: TFeaturesData, index: number) => (
                 <tr
                   key={index}
-                  className="voip-row w-full flex md:flex-row flex-col items-center md:gap-y-0 gap-y-4 py-[20px]"
+                  className="voip-row w-full flex items-center gap-4 py-[20px]"
                 >
                   {/* Feature Name Column */}
                   <td className="max-w-[256px] w-full flex md:flex-row flex-row-reverse items-center gap-x-[4px] pl-4">

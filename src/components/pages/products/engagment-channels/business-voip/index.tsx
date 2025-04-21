@@ -1,22 +1,28 @@
 import Button from "@/components/buttons/button";
-import { USNewsBadgeCard } from "./business-voip-components";
+import {
+  USNewsBadgeCard,
+  VoIPInfoCard,
+  VoipPlatformsReviewsCard,
+  WhyVoip,
+} from "./business-voip-components";
 import BusinessVoipFeatuesTable from "./business-voip-features-table";
 import { VoipPlans } from "./voip-plans";
 import VideoPlayer from "@/components/cards/video-player";
-import { AnimatePresence } from "framer-motion";
 import VoipFaqs from "./voip-faqs";
 import { ArrowRight } from "iconsax-react";
+import BusinessVoipCompareTable from "./business-voip-compare-tale";
+import BookingForm from "@/components/sections/booking-form";
 
 export const BusinessVoip = () => {
   return (
     <>
-      <section>
-        <div className="w-full container-container container-narrow">
-          <div className="wrapper w-full flex justify-between items-center">
+      <section className="flex justify-center">
+        <div className="w-full md:max-w-[78.5rem] max-w-full md:px-[0px] px-[1rem] mx-auto container-narrow">
+          <div className="wrapper w-full flex md:flex-row flex-col justify-between items-center md:gap-[0px] gap-10">
             <div className="w-full flex-1">
               <div className="w-full flex flex-col items-center justify-between gap-y-8">
-                <div className="flex flex-col items-start justify-center gap-y-[3rem]">
-                  <h2 className="text-primary-900 text-[56px] leading-[1.1] font-extrabold">
+                <div className="md:text-start text-center flex flex-col md:items-start items-center justify-center gap-y-[3rem]">
+                  <h2 className="text-primary-900 md:text-[56px] text-[32px] leading-[1.1] font-extrabold">
                     The small business VoIP phone system for modern work.
                   </h2>
                   <p className="text-primary-900 text-3xl leading-[1.1]">
@@ -25,7 +31,7 @@ export const BusinessVoip = () => {
                     Trusted by millions.
                   </p>
                 </div>
-                <div className="w-full flex flex-col items-start gap-y-4">
+                <div className="w-full flex flex-col md:flex-row md:items-start items-center gap-4">
                   <a
                     href="#"
                     className="py-[1.5rem] px-[3rem] text-white font-bold text-[1.3rem] bg-primary-600 rounded-full"
@@ -58,13 +64,13 @@ export const BusinessVoip = () => {
         </div>
       </section>
 
-      <section id="us-news-badge-section">
-        <div className="container-container flex justify-between items-center">
+      <section id="us-news-badge-section" className="flex justify-center">
+        <div className="w-full max-w-[78.5rem] mx-auto flex md:flex-row flex-col justify-between items-center px-[20px]">
           <USNewsBadgeCard text="Best office phone system" />
           <USNewsBadgeCard text="HD video conferencing" />
           <img
             src="/assets/icons/badges/US-news-badge.webp"
-            className="w-[120px]"
+            className="w-[120px] md:order-none order-first md:mb-[0px] mb-4"
           />
           <USNewsBadgeCard text="Mobile & desktop apps" />
           <USNewsBadgeCard text="Superior network reliability" />
@@ -87,8 +93,8 @@ export const BusinessVoip = () => {
         </div>
       </section>
 
-      <section id="voip-plans">
-        <div className="container-container container-narrow">
+      <section id="voip-table">
+        <div className="container-container md:pt-[120px] pt-[80px]">
           <div className="flex flex-col gap-y-[80px]">
             <div className="flex flex-col items-center justify-center gap-y-[30px]">
               <h2 className="text-center text-5xl text-primary-900 font-bold">
@@ -125,15 +131,15 @@ export const BusinessVoip = () => {
               <h5 className="text-black/70 text-3xl font-bold">
                 Top calling features your business needs.
               </h5>
-              <h2 className="text-center text-5xl text-primary-900 font-bold">
+              <h2 className="md:text-center text-start md:text-5xl text-2xl text-primary-900 font-bold">
                 Get advanced features with your business VoIP service.
               </h2>
             </div>
-            <div className="h-full flex justify-between items-center gap-[60px]">
-              <div className="h-full w-1/2 features-faqs flex flex-col">
+            <div className="h-full flex md:flex-row flex-col justify-between items-center gap-[60px]">
+              <div className="h-full md:w-1/2 w-full features-faqs flex flex-col">
                 <VoipFaqs />
               </div>
-              <div className="video h-full w-1/2 flex flexx-col items-center justify-center">
+              <div className="video h-full md:w-1/2 w-full flex flexx-col items-center justify-center">
                 <VideoPlayer
                   src="/assets/videos/voip/Best Small Business VoIP Solution [Trusted by 1M+ Users].ts"
                   poster={
@@ -154,49 +160,154 @@ export const BusinessVoip = () => {
       </section>
 
       <section>
-        <div className="container-container">
+        <div className="container-container md:pt-[120px] pt-[80px]">
           <div className="flex flex-col">
-            <div className="flex flex-col items-center gap-y-6">
-              <p className="text-primary-600 capitalize">PHONE SYSTEMS</p>
-              <p className="text-primary-900 text-5xl font-bold">
+            <div className="flex flex-col items-center text-center gap-y-6">
+              <p className="text-[12px] text-primary-600 font-bold capitalize">
+                PHONE SYSTEMS
+              </p>
+              <p className="text-primary-900 md:text-5xl text-3xl font-bold">
                 Business VoIP vs. Traditional Phones
               </p>
-              <p className="text-primary-900 text-2xl">
+              <p className="text-primary-900 md:text-2xl text-lg">
                 How does a VoIP system compare to analog phone lines? The winner
                 is clear here.
               </p>
             </div>
-            <div className="">
-              <div className="w-full overflow-x-auto">
-                <table className="w-full">
-                  {/* Table Header */}
-                  <thead>
-                    <tr className="bg-primary-600 px-[0px] w-full flex items-center py-[1rem] my-[24px] border-b">
-                      <th className="text-start w-full mx-auto">{"Test"}</th>
+            <div className="flex flex-col gap-y-[80px]">
+              <BusinessVoipCompareTable />
 
-                      <th className="text-center w-full mx-auto">{"Test"}</th>
-                      <th className="text-center w-full mx-auto">{"Test"}</th>
-                    </tr>
-                  </thead>
-
-                  {/* Table Body */}
-                  <tbody className="voip-table-body-wrapper w-full divide-y">
-                    <tr className="voip-row w-full flex md:flex-row flex-col items-center md:gap-y-0 gap-y-4 py-[20px]">
-                      {/* Feature Name Column */}
-                      <td className="max-w-[256px] w-full flex md:flex-row flex-row-reverse items-center gap-x-[4px] pl-4"></td>
-
-                      {/* Feature Status Columns */}
-                      <td className="w-full flex justify-center bg-white">
-                        {"test"}
-                      </td>
-
-                      <td className="w-full text-sm flex justify-center items-center ">
-                        {"test"}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div className="flex flex-col gap-y-6">
+                <h3 className="text-center text-primary-900 text-3xl font-bold">
+                  Get the best choice in business communications
+                </h3>
+                <p className="text-center text-primary-900">
+                  Nextiva is more than a VoIP provider. It’s your partner as you
+                  scale and your business needs change. Your team’s
+                  communication and collaboration needs are covered with
+                  NextivaONE. And it only gets better with new functionality
+                  each month. Traditional landlines simply can’t do that.
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="voip-cta-provider">
+        <div className="bg-[#ebeff5] w-full h-auto mt-[60px]">
+          <div className="flex flex-col items-center gap-y-6 py-[60px]">
+            <div className="text-center">
+              <p className="text-primary-900 text-3xl font-bold">
+                Over a million users made Nextiva the #1 business VoIP provider.
+              </p>
+              <p className="text-primary-900 text-xl">
+                See how much you’ll save on business communications from
+                Nextiva.
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <Button
+                text="Talk with an expert"
+                className="font-bold !text-[14px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container-container container-narrow">
+          <div className="flex flex-col gap-y-[100px]">
+            <h2 className="text-primary-900 md:text-5xl text-3xl md:text-start text-center font-bold">
+              Why choose Nextiva for small business VoIP?
+            </h2>
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-x-[80px] gap-y-[100px]">
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Honest-pricing-icon.png"
+                title="Unmatched features"
+                p1="Our small business phone plans include a robust suite of calling features, including threaded conversations for a complete customer communication history, call recording, and easy text messaging."
+                p2="Plus, you can integrate it with leading CRM and email software."
+              />
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Reliable-icon.png"
+                title="Superior reliability & security"
+                p1="Enjoy industry-leading uptime of 99.999% and stay connected with our highly redundant network connecting billions of voice calls."
+                p2="Nextiva complies with industry standards, including SOC 2, HIPAA, and PCI-DSS, to ensure data protection and security."
+              />
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Scalable-icon.png"
+                title="Instant scalability"
+                p1="Free yourself from the limits of landlines and give your team the best VoIP solution."
+                p2="Adding a new location? Working from home? Add business phone numbers, update call flows, and toggle advanced features instantly."
+              />
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Hosted-PBX-icon.png"
+                title="Hassle-free PBX"
+                p1="No updates or costly hardware to deal with. Manage your business VoIP service anywhere."
+                p2="Set up employees, see voice calls in real-time, and assign virtual phone numbers in a secure portal. Your traditional phone PBX is history."
+              />
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Affordable-icon.png"
+                title="Surprisingly affordable"
+                p1="Lower phone service costs by over 60% vs. traditional landlines. Choose a plan that fits your budget and grows with your business. We offer transparent pricing without surprises."
+                p2="Plus, you can make international calls for just pennies per minute. Get unified communications for less."
+              />
+              <WhyVoip
+                src="/assets/icons/png/voip-features/SMB-Service-icon.webp"
+                title="Amazing Service®"
+                p1="Our knowledgeable and friendly customer support team is available 24/7 over the phone, email, and chat to help you with your business phone system."
+                p2="Business owners rate Nextiva as the best VoIP provider for our exceptional support. Period."
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="voip-cta-provider">
+        <div className="bg-[#EBF2FE] w-full h-auto mt-[60px]">
+          <div className="container-container">
+            <div className="w-full flex md:flex-row flex-col items-start gap-6 py-[60px]">
+              <h2 className="w-full text-primary-900 md:text-4xl text-xl font-bold">
+                Is VoIP Worth the Hype?
+              </h2>
+              <div className="flex flex-col max-w-[600px]">
+                <VoIPInfoCard />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="platform-rating">
+        <div className="flex justify-center items-center">
+          <div className="w-full max-w-[66.25rem] py-[60px] md:px-[0px] px-[40px]">
+            <div className="w-full grid md:grid-cols-3 grid-cols-1 gap-6">
+              <VoipPlatformsReviewsCard
+                icon="/assets/icons/companies/g2.png"
+                rate={4.5}
+              />
+              <VoipPlatformsReviewsCard
+                icon="/assets/icons/companies/Gartner-Logo-Blue.png"
+                rate={4.7}
+              />
+              <VoipPlatformsReviewsCard
+                icon="/assets/icons/companies/getvoip-logo.png"
+                rate={4.6}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form">
+        <div className="container-container container-narrow">
+          <div className="flex flex-col">
+            <h2 className="text-center text-primary-900 md:text-[46px] text-2xl font-extrabold leading-[1.1]">
+              See why 100,000+ brands choose Nextiva for business VoIP.
+            </h2>
+            <div className="">
+              <BookingForm />
             </div>
           </div>
         </div>

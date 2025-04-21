@@ -21,6 +21,7 @@ const Navbar = () => {
     "/enterprice",
     "/products/digital-channels",
     "/products/messaging-apps",
+    "/products/business-voip",
   ].includes(currentPath);
 
   // Close menu when scrolling
