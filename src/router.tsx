@@ -10,6 +10,7 @@ import SocialMediaChannels from "./components/pages/products/engagment-channels/
 import CustomersReviews from "./components/pages/products/engagment-channels/customers-reviews";
 import { LiveChat } from "./components/pages/products/engagment-channels/live-chat";
 import { BusinessVoip } from "./components/pages/products/engagment-channels/business-voip";
+import CustomerCommunication from "./components/pages/products/engagment-channels/customer-communication";
 
 const AppRouter: React.FC = () => {
   return (
@@ -36,6 +37,10 @@ const AppRouter: React.FC = () => {
             element={<CustomersReviews />}
           />
           <Route path="/products/live-chat" element={<LiveChat />} />
+          <Route
+            path="/products/customer-communication"
+            element={<CustomerCommunication />}
+          />
         </Routes>
       </Layout>
     </Router>

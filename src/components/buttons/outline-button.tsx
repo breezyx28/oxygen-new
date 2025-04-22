@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 
 type OutlineButtonProps = {
-  text: string;
+  text: any;
   className?: string;
 };
 
