@@ -15,4 +15,7 @@ export default defineConfig({
     outDir: "new-oxygen", // Change 'dist' to 'new-oxygen'
     emptyOutDir: true, // Clears the directory before build
   },
+  optimizeDeps: {
+    include: ["swiper/react", "swiper"],
+  },
 });
