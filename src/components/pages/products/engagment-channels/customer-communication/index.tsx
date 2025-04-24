@@ -72,9 +72,9 @@ export default function CustomerCommunication() {
           </div>
         </div>
         <div className="container-container">
-          <div className="container w-full py-[100px]">
-            <div className="glass-card flex justify-between items-center px-[80px] py-[120px]">
-              <h2 className="max-w-2/3 text-5xl">
+          <div className="container w-full md:py-[100px] py-[50px]">
+            <div className="glass-card flex md:flex-row flex-col justify-between items-center gap-6 md:px-[80px] md:py-[120px] px-[40px] py-[60px]">
+              <h2 className="max-w-2/3 md:text-5xl text-[28px] text-center md:text-start">
                 The future of customer conversations
               </h2>
               <OutlineButton
@@ -90,6 +90,7 @@ export default function CustomerCommunication() {
           </div>
         </div>
       </section>
+
       <section className="relative w-full h-auto text-white z-1">
         <div className="absolute right-0 top-0 h-full w-full z-[-1]">
           {/* Use next/image for optimization */}
@@ -104,11 +105,11 @@ export default function CustomerCommunication() {
         </div>
         <div className="container-container container-narrow z-20">
           <div className="flex flex-col gap-y-10">
-            <h2 className="text-[40px] leading-[1.2] text-start text-white font-bold">
+            <h2 className="md:text-[40px] text-[28px] leading-[1.2] text-start text-white font-bold">
               Seamlessly manage all of voice, video, messaging with customers
               and team on a unified platform.
             </h2>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-4 grid-cols-1 gap-4">
               <CustomerCommunicationFadeCard
                 icon={
                   <Microphone2
@@ -208,10 +209,10 @@ export default function CustomerCommunication() {
         <div className="container-container container-narrow">
           <div className="flex flex-col gap-10">
             <div className="">
-              <h2 className="text-5xl text-black font-bold">
+              <h2 className="md:text-5xl text-xl text-black font-bold">
                 One app for all customer conversations.{" "}
               </h2>
-              <h2 className="text-5xl text-black/50 font-bold">
+              <h2 className="md:text-5xl text-xl text-black/50 font-bold">
                 Your business voice, texts, video meetings, and contacts – all
                 in one place.
               </h2>
@@ -226,10 +227,10 @@ export default function CustomerCommunication() {
       <section className="bg-[#f9fafe]">
         <div className="container-container container-narrow">
           <div className="flex flex-col justify-between items-center gap-y-6">
-            <h2 className="text-5xl text-black font-bold">
+            <h2 className="md:text-5xl text-3xl text-black font-bold md:text-start text-center">
               Connected to the tools you love
             </h2>
-            <h4 className="text-xl text-black/70">
+            <h4 className="text-xl text-black/70 md:text-start text-center">
               Nextiva integrates seamlessly into your existing ecosystem.
             </h4>
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-[60px]">
@@ -369,7 +370,9 @@ export default function CustomerCommunication() {
 
             <div className="mt-6">
               <a href="#" className="flex justify-center items-center gap-2">
-                <h3 className="text-2xl font-bold">See all integrations</h3>
+                <h3 className="md:text-2xl text-sm font-bold">
+                  See all integrations
+                </h3>
                 <ArrowRight />
               </a>
             </div>
@@ -393,10 +396,10 @@ export default function CustomerCommunication() {
             <div className="w-full container-narrow">
               <div className="flex flex-col justify-center items-center gap-y-10">
                 <div className="flex flex-col justify-center items-center gap-5">
-                  <h2 className="text-5xl text-white font-bold">
+                  <h2 className="md:text-5xl text-3xl text-white font-bold text-center md:text-start">
                     View. Analyze. Act.
                   </h2>
-                  <h3 className="text-white/50 text-xl font-bold">
+                  <h3 className="text-white/70 md:text-xl text-sm md:font-bold font-medium text-center md:text-start">
                     A real-time dashboard that tracks call activity across your
                     entire organization.
                   </h3>
@@ -424,17 +427,17 @@ export default function CustomerCommunication() {
         <div className="container-container container-narrow">
           <div className="flex flex-col gap-y-12">
             <div className="text-center flex flex-col items-center justify-center gap-5">
-              <h2 className="max-w-[80%] text-6xl text-black font-bold">
+              <h2 className="max-w-[80%] md:text-6xl text-3xl text-black font-bold">
                 Easy to set up and scale. Future-proofed for tomorrow.
               </h2>
-              <p className="text-lg text-black/70">
+              <p className="md:text-lg text-sm text-black/70">
                 Manage all communication, workflows, users, and permissions in
                 one view.
               </p>
             </div>
             <a
               href="#"
-              className="flex justify-center items-center gap-2 text-black text-xl font-bold hover:text-primary-600"
+              className="flex justify-center items-center gap-2 text-black md:text-xl text-sm font-bold hover:text-primary-600"
             >
               Learn more <ArrowRight />
             </a>
@@ -450,11 +453,11 @@ export default function CustomerCommunication() {
 
       <section>
         <div className="container-container container-narrow">
-          <div className="text-center flex flex-col items-center justify-center gap-8">
-            <h2 className="text-5xl text-black font-bold">
+          <div className="text-center flex flex-col items-center justify-center md:gap-8 gap-4">
+            <h2 className="md:text-5xl text-3xl text-black font-bold">
               Work here, there, and everywhere
             </h2>
-            <p className="text-lg text-black/70">
+            <p className="md:text-lg text-sm text-black/70">
               Work anywhere, across all your devices.
             </p>
             <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
@@ -494,7 +497,7 @@ export default function CustomerCommunication() {
           <div className="absolute inset-0 w-full h-full overflow-hidden">
             <img
               src="/assets/images/backgrounds/products/customer-communication-bg-7.webp"
-              className="w-full h-full object-cover min-h-screen md:min-h-0"
+              className="w-full h-full object-cover object-left min-h-screen md:min-h-0"
               alt="Background"
             />
           </div>
@@ -502,12 +505,12 @@ export default function CustomerCommunication() {
           {/* Content container */}
           <div className="relative container-container flex flex-col">
             <div className="w-full container-narrow">
-              <div className="flex justify-between items-center">
-                <h2 className="text-white text-6xl font-bold max-w-[30%]">
+              <div className="flex md:flex-row flex-col justify-between items-center">
+                <h2 className="text-white md:text-6xl text-3xl font-bold md:max-w-[30%] max-w-full">
                   Reliable. Compliant. Trusted by millions.
                 </h2>
 
-                <div className="max-w-[40%] flex flex-col divide divide-y divide-white/20">
+                <div className="md:max-w-[40%] max-w-full flex flex-col divide divide-y divide-white/20">
                   <CustomerCommunicationTrustedByCard
                     src="key-icon-min.png"
                     text="99.999% Uptime. Military Grade Security"
@@ -529,7 +532,7 @@ export default function CustomerCommunication() {
 
       <section>
         <div className="container-container container-narrow">
-          <div className="w-full h-full md:h-[350px] flex justify-between items-center gap-12">
+          <div className="w-full h-full md:h-[350px] flex md:flex-row flex-col-reverse justify-between items-center gap-12">
             <div className="">
               <img
                 src="/assets/images/backgrounds/products/customer-communication-bg-8.webp"
@@ -537,11 +540,11 @@ export default function CustomerCommunication() {
               />
             </div>
             <div className="w-full h-full">
-              <div className="h-full flex flex-col justify-between max-w-[400px]">
-                <h2 className="text-4xl font-bold">
+              <div className="h-full flex flex-col justify-between md:items-start items-center md:gap-0 gap-12 md:max-w-[400px] max-w-full">
+                <h2 className="text-4xl font-bold md:text-start text-center">
                   Nextiva sets the industry standard
                 </h2>
-                <p className="text-base text-black/70">
+                <p className="text-base text-black/70 md:text-start text-center">
                   Rated by customers voted best product and support, easiest to
                   set up and use.
                 </p>
@@ -564,11 +567,11 @@ export default function CustomerCommunication() {
         <div className="container-container container-narrow">
           <div className="flex flex-col justify-between items-center gap-y-6">
             <div className="text-center">
-              <h2 className="max-w-[600px] text-5xl text-black font-bold">
+              <h2 className="max-w-[600px] md:text-5xl text-[30px] leading-[1.2] text-black font-bold">
                 Features we wouldn’t let you go without
               </h2>
             </div>
-            <div className="grid md:grid-cols-3 grid-cols-1 gap-6 mt-[60px]">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-6 md:mt-[60px] mt-[10px]">
               <CustomerCommunicationFeatureCard
                 icon={
                   <Call className="text-primary-600" variant="Bold" size={32} />
@@ -700,18 +703,18 @@ export default function CustomerCommunication() {
       <section>
         <div className="container-container">
           <div className="flex flex-col gap-y-12">
-            <h2 className="text-black text-5xl text-center">
+            <h2 className="text-black md:text-5xl text-2xl text-center">
               “We have not worked with any other company that has had as big of
               an impact on our business as Nextiva”
             </h2>
-            <div className="flex justify-center items-center gap-8">
+            <div className="flex md:flex-row flex-col justify-center items-center gap-8">
               <img
                 src="/assets/images/avatars/client-profile.webp"
                 className="w-[80px] h-[80px] rounded-full"
               />
-              <div className="flex flex-col">
-                <h4 className="text-2xl">Ryan Petersen,</h4>
-                <p className="text-black/70 text-xl">
+              <div className="flex flex-col md:text-start text-center">
+                <h4 className="md:text-2xl text-xl">Ryan Petersen,</h4>
+                <p className="text-black/70 md:text-xl text-sm">
                   Founder and CEO of Flexport
                 </p>
               </div>
@@ -727,7 +730,7 @@ export default function CustomerCommunication() {
               <SliderComponent
                 items={sliderComponent}
                 slidesToShow={5}
-                speed={2500}
+                speed={5000}
                 className="py-8"
                 autoplay={true}
                 pauseOnHover={true}
@@ -777,7 +780,7 @@ export default function CustomerCommunication() {
 }
 
 const sliderComponent = [
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -789,7 +792,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -801,7 +804,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -813,7 +816,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -825,7 +828,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -837,7 +840,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>
@@ -849,7 +852,7 @@ const sliderComponent = [
       <ArrowRight className="text-black/50" size={50} />
     </div>
   </div>,
-  <div className="w-full p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
+  <div className="md:w-full w-[300px] p-[2rem] flex flex-col justify-center gap-y-[44px] rounded-[1rem] border border-[#0b10291a] bg-[#0b10290d]">
     <div className="">
       <img src="/assets/icons/companies/texhcrunch.png" />
     </div>

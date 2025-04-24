@@ -3,8 +3,8 @@
 
 @utility hero-title-text {
   @apply text-white font-[600];
-  font-size: clamp(3rem, 10vw, 4.875rem) !important;
-  line-height: clamp(4.375rem, 11vw, 5.3625rem) !important;
+  font-size: clamp(2.5rem, 10vw, 4.875rem) !important;
+  line-height: clamp(3.375rem, 11vw, 5.3625rem) !important;
 }
 
 @utility hero-subtitle-text {

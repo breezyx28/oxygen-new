@@ -28,10 +28,10 @@ export const CustomerCommunicationToggler = () => {
       src: "/assets/images/backgrounds/products/customer-communication-bg-2.webp",
       title: "Desktop and Browser Experience",
       content: [
-        <h3 className="pl-8 border-l-2 border-black text-2xl font-bold transition-all delay-300 ease-in-out duration-300">
+        <h3 className="pl-8 border-l-2 border-black md:text-2xl text-xl font-bold transition-all delay-300 ease-in-out duration-300">
           Desktop and Browser Experience
         </h3>,
-        <h4 className="pl-8 text-sm text-black/50 font-bold">
+        <h4 className="pl-8 text-sm text-black/50 md:font-bold font-medium">
           Make phone calls, host video meetings, and send texts. Manage your
           contacts, calendar, files, links and recordings.
         </h4>,
@@ -53,10 +53,10 @@ export const CustomerCommunicationToggler = () => {
       src: "/assets/images/backgrounds/products/customer-communication-bg-3.webp",
       title: "Mobile Experience",
       content: [
-        <h3 className="pl-8 border-l-2 border-black text-2xl font-bold">
+        <h3 className="pl-8 border-l-2 border-black md:text-2xl text-xl font-bold">
           Mobile Experience
         </h3>,
-        <h4 className="pl-8 text-sm text-black/50 font-bold">
+        <h4 className="pl-8 text-sm text-black/50 md:font-bold font-medium">
           Stay connected with customers and teams wherever you are. Take
           business on the go with your phone, contacts, call and text history
           all in one place.
@@ -68,10 +68,10 @@ export const CustomerCommunicationToggler = () => {
       src: "/assets/images/backgrounds/products/customer-communication-bg-4.webp",
       title: "Conference rooms, desktop phones and headsets",
       content: [
-        <h3 className="pl-8 border-l-2 border-black text-2xl font-bold">
+        <h3 className="pl-8 border-l-2 border-black md:text-2xl text-xl font-bold">
           Conference rooms, desktop phones and headsets
         </h3>,
-        <h4 className="pl-8 text-sm text-black/50 font-bold">
+        <h4 className="pl-8 text-sm text-black/50 md:font-bold font-medium">
           Connect our platform and software throughout your business, in
           conference rooms or at your desk with a handset or headset.
         </h4>,
@@ -82,9 +82,9 @@ export const CustomerCommunicationToggler = () => {
     <div className="flex flex-col gap-y-10">
       <div
         id="customer-communication-toggle-1"
-        className="flex items-center justify-between gap-10"
+        className="flex md:flex-row flex-col items-center justify-between gap-10"
       >
-        <div className="max-w-1/3 w-full h-auto flex flex-col gap-6">
+        <div className="md:max-w-1/3 max-w-full w-full h-auto flex flex-col gap-6">
           {data.map((item: any, index: number) => {
             return activeId === item.id ? (
               <div
@@ -99,7 +99,7 @@ export const CustomerCommunicationToggler = () => {
               </div>
             ) : (
               <div
-                className="border-l pl-8 text-base text-black"
+                className="border-l pl-8 md:text-base text-sm text-black"
                 onClick={() => setActiveId(item.id)}
               >
                 {item?.title}
@@ -135,9 +135,11 @@ export const CustomerCommunicationToolsCard = ({
   >
     <div className="gap-[16px] flex flex-col">
       {icon}
-      <h3 className="text-xl font-bold text-black">{title}</h3>
+      <h3 className="md:text-xl text-base font-bold text-black">{title}</h3>
     </div>
-    <p className="text-[14px] leading-[1.5] text-black/70">{text}</p>
+    <p className="md:text-[14px] text-[12px] leading-[1.5] text-black/70">
+      {text}
+    </p>
   </div>
 );
 
@@ -197,18 +199,18 @@ export const CustomerCommunicationPlatformCard = ({
   subtitle: string;
 }) => (
   <div
-    className="w-full h-[400px] border border-black/20 rounded-[24px] p-[36px]"
+    className="w-full md:h-[400px] h-[340px] border border-black/20 rounded-[24px] p-[36px]"
     style={{
       boxShadow: "0 7px 32px 0 rgba(11,16,41,.05)",
     }}
   >
     <div className="w-full h-full flex flex-col justify-between items-start">
-      <div className="w-[80px] h-[80px] flex items-center justify-center border rounded-[12px]">
+      <div className="w-[80px] h-[80px] md:scale-[1] scale-[.8] flex items-center justify-center border rounded-[12px]">
         {icon}
       </div>
       <div className="flex flex-col text-start gap-y-3">
-        <h4 className="text-3xl font-bold">{title}</h4>
-        <p className="text-black/70">{subtitle}</p>
+        <h4 className="md:text-3xl text-xl font-bold">{title}</h4>
+        <p className="text-black/70 md:text-base text-sm">{subtitle}</p>
       </div>
     </div>
   </div>
@@ -221,33 +223,32 @@ export const CustomerCommunicationTrustedByCard = ({
   text: string;
   src: string;
 }) => (
-  <div className="flex items-center gap-5 py-7">
+  <div className="flex items-center md:gap-5 gap-4 py-7">
     <img
       src={`/assets/icons/png/customer-communication/${src}`}
-      width={64}
-      height={64}
+      className="md:w-[64px] md:h-[64px] w-[56px] h-[56px]"
     />
-    <p className="text-white text-xl">{text}</p>
+    <p className="text-white md:text-xl text-sm">{text}</p>
   </div>
 );
 
 export const SliderCard = () => {
   return (
-    <div className="w-full py-[24px] px-[32px] rounded-[24px] flex justify-between items-center gap-[60px] bg-[linear-gradient(100deg,rgba(55,88,249,0.046)_47.8%,rgba(55,88,249,0)_96%)]">
-      <div className="flex flex-col gap-y-8 max-w-1/2">
-        <h3 className="text-3xl font-bold">
+    <div className="w-full py-[24px] px-[32px] rounded-[24px] flex md:flex-row flex-col justify-between items-center md:gap-[60px] gap-[30px] bg-[linear-gradient(100deg,rgba(55,88,249,0.046)_47.8%,rgba(55,88,249,0)_96%)]">
+      <div className="flex flex-col md:gap-y-8 gap-y-6 md:max-w-1/2 max-w-full">
+        <h3 className="md:text-3xl text-2xl font-bold">
           “DHL’s team uses Nextiva to handle ticketing for all customer shipping
           quotes”
         </h3>
         <div className="flex flex-col">
-          <h2 className="text-5xl font-bold">1.7 billion</h2>
+          <h2 className="md:text-5xl text-2xl font-bold">1.7 billion</h2>
           <span className="text-base text-black/60">Parcels per year</span>
         </div>
       </div>
       <div className="">
         <img
           src="/assets/images/labels/DHL.webp"
-          className="w-full rounded-[24px] h-[370px]"
+          className="w-full rounded-[24px] md:h-[370px] h-auto"
         />
       </div>
     </div>

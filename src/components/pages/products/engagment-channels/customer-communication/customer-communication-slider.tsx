@@ -21,14 +21,14 @@ export const CustomerCommunicationSlider = () => {
           spaceBetween={50}
           slidesPerView={1}
         >
-          {[1, 2, 3, 4].map((slide, index) => (
+          {[1, 2, 3, 4].map((index) => (
             <SwiperSlide key={index}>
               <SliderCard />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center md:mt-0 mt-[5rem]">
           {/* Custom controls below the swiper */}
           <div className="w-[fit-content] flex items-center justify-center gap-6 mt-12">
             <button className="swiper-button-prev-custom text-xl text-gray-600 hover:text-black cursor-pointer">
