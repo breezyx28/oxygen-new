@@ -42,7 +42,7 @@ const CustomerExperince = () => {
         </div>
         <div className="container-container w-full h-auto flex justify-center items-center pt-[12.984375vw]">
           <div className="max-w-full w-full text-center">
-            <h1 className="hero-title-text !text-[68px]">
+            <h1 className="hero-title-text md:!text-[68px] !text-5xl md:mt-0 mt-20">
               Create an amazing <span className="text-disabled">sales</span> and{" "}
               <span className="text-disabled">service</span> customer
               experience.
@@ -54,7 +54,7 @@ const CustomerExperince = () => {
             </p>
             <OutlineButton
               text={"Get personalized demo"}
-              className="text-white border-white mt-12 hover:bg-transparent scale-[1] hover:scale-[1.05] transition-all duration-300 ease-in"
+              className="md:w-[fit-content] !w-full text-white border-white md:mt-12 mt-8 hover:bg-transparent scale-[1] hover:scale-[1.05] transition-all duration-300 ease-in"
             />
           </div>
         </div>
@@ -62,12 +62,12 @@ const CustomerExperince = () => {
           <div className="">
             <div className="container-container">
               <div className="container w-full md:py-[100px] py-[50px]">
-                <div className="glass-card !bg-white/10 min-h-[400px] flex flex-col justify-between items-start p-[48px]">
-                  <h5 className="max-w-2/3 text-lg text-center md:text-start">
+                <div className="glass-card !bg-white/10 md:min-h-[400px] min-h-[250px] flex flex-col justify-between items-start md:p-[48px] p-[24px]">
+                  <h5 className="md:max-w-2/3 w-full md:text-lg text-base text-start">
                     <span className="text-disabled">MANAGE INTERACTIONS</span>{" "}
                     ACROSS EVERY CHANNEL
                   </h5>
-                  <h3 className="max-w-2/3 text-5xl text-center md:text-start font-bold">
+                  <h3 className="md:max-w-2/3 w-full md:text-5xl text-xl text-start font-bold">
                     Say goodbye to siloed conversations and{" "}
                     <span className="text-disabled">
                       hello to a unified experience.
@@ -95,7 +95,7 @@ const CustomerExperince = () => {
         </div>
         <div className="container-container">
           <div className="w-full text-center">
-            <h1 className="text-[50px] leading-[1.2] text-start font-bold">
+            <h1 className="md:text-[50px] text-3xl leading-[1.2] text-start font-bold">
               Customer expectations have changed.{" "}
               <span className="text-disabled">
                 Consumers want unified experiences that siloed and dated
@@ -103,17 +103,17 @@ const CustomerExperince = () => {
               </span>
             </h1>
 
-            <div className="w-full h-full flex justify-between items-center gap-14 mt-[60px]">
-              <div className="w-1/2 h-full">
+            <div className="w-full h-full flex md:flex-row flex-col justify-between items-center gap-14 mt-[60px]">
+              <div className="md:w-1/2 w-full h-full">
                 <img
                   src="/assets/images/backgrounds/products/customer-experince-bg-3.webp"
                   className="w-auto h-auto object-contain"
                 />
               </div>
-              <div className="w-1/2 flex flex-col justify-between gap-y-12">
+              <div className="md:w-1/2 w-full flex flex-col justify-between gap-y-12">
                 <div className="flex flex-col gap-4">
                   <div className="">
-                    <h3 className="flex items-center gap-2 text-3xl font-bold">
+                    <h3 className="flex items-center gap-2 md:text-3xl text-xl font-bold">
                       <span className="text-red-700">01</span>
                       <span className="">Consumer habits</span>
                     </h3>
@@ -126,7 +126,7 @@ const CustomerExperince = () => {
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="">
-                    <h3 className="flex items-center gap-2 text-3xl font-bold">
+                    <h3 className="flex items-center gap-2 md:text-3xl text-xl font-bold">
                       <span className="text-red-700">02</span>
                       <span className="">Consumer expectations</span>
                     </h3>
@@ -139,7 +139,7 @@ const CustomerExperince = () => {
                 </div>
                 <div className="flex flex-col gap-4">
                   <div className="">
-                    <h3 className="flex items-center gap-2 text-3xl font-bold">
+                    <h3 className="flex items-center gap-2 md:text-3xl text-xl font-bold">
                       <span className="text-red-700">03</span>
                       <span className="">Consumer tech-adoption</span>
                     </h3>
@@ -159,7 +159,7 @@ const CustomerExperince = () => {
       <section>
         <div className="container-container container-narrow">
           <div className="flex flex-col items-center">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
               <CustomerExperincePlatformCard
                 src="/assets/images/posters/customer-experince/poster-1.webp"
                 icon={
@@ -262,7 +262,7 @@ const CustomerExperince = () => {
       <section>
         <div className="container-narrow">
           <div className="flex flex-col gap-y-10">
-            <h2 className="container-container text-7xl font-bold text-center">
+            <h2 className="container-container md:text-7xl text-3xl font-bold text-center">
               Real-time insights that <br />
               <span className="text-black/50">drive customer outcomes</span>
             </h2>
@@ -277,8 +277,8 @@ const CustomerExperince = () => {
 
       <section>
         <div className="container-container container-narrow">
-          <div className="flex justify-center items-start gap-10">
-            <h2 className="w-1/2 inline text-5xl text-black font-bold">
+          <div className="flex md:flex-row flex-col justify-center items-start gap-10">
+            <h2 className="md:w-1/2 w-full inline md:text-5xl text-2xl text-black font-bold">
               Surveys such as CSAT or NPS only give you feedback from a fraction
               of your customers.{" "}
               <span className="text-black/50">
@@ -286,7 +286,7 @@ const CustomerExperince = () => {
                 with the customer’s sentiment in real time.
               </span>
             </h2>
-            <div className="w-1/2 h-full flex flex-col justify-between items-start gap-y-10">
+            <div className="md:w-1/2 w-full h-full flex flex-col justify-between items-start gap-y-10">
               <CustomerExperinceCard3
                 icon={"image-1.webp"}
                 title="Track sentiment"
@@ -330,11 +330,16 @@ const CustomerExperince = () => {
         <div className="relative z-10 container-container">
           <div className="flex flex-col gap-y-10">
             <div className="flex flex-col gap-y-4">
-              <div className="w-[fit-content] rounded-[16px] bg-green-100 flex items-center gap-2 py-[16px] px-[32px]">
-                <Star variant="Bold" size={32} color="black" />
-                <span className="text-black text-2xl">All Features</span>
+              <div className="w-[fit-content] md:rounded-[16px] rounded-full bg-green-100 flex items-center gap-2 md:py-[16px] md:px-[32px] py-[8px] px-[16px]">
+                <Star
+                  variant="Bold"
+                  className="text-black md:w-[32px] text-[26px]"
+                />
+                <span className="text-black md:text-2xl text-base">
+                  All Features
+                </span>
               </div>
-              <h2 className="inline text-7xl font-bold">
+              <h2 className="inline md:text-7xl text-3xl font-bold">
                 Transform your customer experience with seamless interactions{" "}
                 <span className="text-disabled">
                   across all channels, powered by AI
@@ -347,9 +352,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -359,9 +363,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -371,9 +374,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -383,9 +385,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -395,9 +396,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -407,9 +407,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -419,9 +418,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -431,9 +429,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -443,9 +440,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -455,9 +451,8 @@ const CustomerExperince = () => {
                 subtitle="Inbound Contact Center"
                 icon={
                   <CallIncoming
-                    size={45}
                     variant="Bold"
-                    className="text-whit/20"
+                    className="md:w-[45px] w-[24px] text-whit/20"
                   />
                 }
                 buttonText={"Learn more"}
@@ -510,14 +505,14 @@ const CustomerExperince = () => {
               <div className="w-[fit-content] py-[12px] px-[24px] bg-primary-600 text-xl text-white rounded-[16px]">
                 Future with Oxygen
               </div>
-              <h2 className="text-center text-6xl text-black/70 font-bold">
+              <h2 className="text-center md:text-6xl text-4xl text-black/70 font-bold">
                 Automation and artificial intelligence are becoming everyday
                 technology. <br />
                 <span className="text-primary-600">Get ready with Nextiva</span>
               </h2>
               <Button
                 text="Start for free"
-                className="hover:bg-primary-600 hover:text-white hover:scale-[1.05] transition-all duration-300"
+                className="!w-full text-center hover:bg-primary-600 hover:text-white hover:scale-[1.05] transition-all duration-300"
               />
             </div>
           </div>

@@ -22,13 +22,13 @@ export const CustomerExperinceSelect = () => {
             badge={
               <PageBadge
                 icon={
-                  <>
+                  <div className="flex items-center gap-2 md:text-2xl text-base">
                     <Monitor variant="Bold" className="text-primary-600" />
                     Connected
-                  </>
+                  </div>
                 }
                 text="conversations"
-                textClass="text-black/50 !text-2xl"
+                textClass="text-black/50 md:!text-2xl text-base"
                 className="bg-transparent text-2xl"
               />
             }
@@ -44,13 +44,13 @@ export const CustomerExperinceSelect = () => {
             badge={
               <PageBadge
                 icon={
-                  <>
+                  <div className="flex items-center gap-2 md:text-2xl text-base">
                     <Monitor variant="Bold" className="text-primary-600" />
                     AI-powered
-                  </>
+                  </div>
                 }
                 text="automations"
-                textClass="text-black/50 !text-2xl"
+                textClass="text-black/50 md:!text-2xl text-base"
                 className="bg-transparent text-2xl"
               />
             }
@@ -66,13 +66,13 @@ export const CustomerExperinceSelect = () => {
             badge={
               <PageBadge
                 icon={
-                  <>
+                  <div className="flex items-center gap-2 md:text-2xl text-base">
                     <Monitor variant="Bold" className="text-primary-600" />
                     Customer
-                  </>
+                  </div>
                 }
                 text="journey management"
-                textClass="text-black/50 !text-2xl"
+                textClass="text-black/50 md:!text-2xl text-base"
                 className="bg-transparent text-2xl"
               />
             }
@@ -89,14 +89,14 @@ export const CustomerExperinceSelect = () => {
     <section>
       <div className="container-container container-narrow">
         <div className="bg-white pt-[80px] md:border-b border-none">
-          <div className="md:px-0 px-[40px] flex justify-center items-center mb-8">
-            <div className="text-7xl font-bold text-center">
+          <div className="px-0 flex justify-center items-center mb-8">
+            <div className="md:text-7xl text-4xl font-bold text-center">
               The ultimate CX platform that goes beyond conversations
             </div>
           </div>
 
           <div className="mb-8">
-            <div className="w-full md:flex hidden justify-between md:gap-[0px] gap-[8px] border-b divide divide-x">
+            <div className="w-full flex justify-between md:gap-[0px] gap-[8px] border-b divide divide-x">
               {tabs.map((tab) => (
                 <button
                   key={tab}
@@ -112,7 +112,7 @@ export const CustomerExperinceSelect = () => {
                 </button>
               ))}
             </div>
-            <SelectOptions
+            {/* <SelectOptions
               className="w-full md:hidden flex"
               onChange={(e: any) => setActiveTab(e.currentTarget.value)}
               options={[
@@ -132,7 +132,7 @@ export const CustomerExperinceSelect = () => {
                   text: "AI powered journeys",
                 },
               ]}
-            />
+            /> */}
           </div>
         </div>
         <div className="">{renderContent()}</div>

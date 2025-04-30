@@ -23,9 +23,9 @@ const BookingFormSection = () => {
 
   return (
     <section id="booking-form" className="w-full">
-      <div className="pl-[160px] container-narrow">
-        <div className="wrapper w-full md:h-screen h-auto flex md:flex-row flex-col-reverse gap-[24px]">
-          <div className="booking-form flex flex-col gap-y-8 !shadow-none">
+      <div className="md:pl-[160px] pl-0 container-narrow">
+        <div className="wrapper w-full md:h-screen h-auto flex md:flex-row flex-col gap-[24px]">
+          <div className="booking-form w-full flex flex-col gap-y-8 !shadow-none">
             <div className="w-[fit-content] px-6 py-4 bg-green-100 rounded-[16px] flex items-center gap-x-2">
               <Play variant="Bold" className="text-black/70" />
               <span className="text-black">Get a personalized demo</span>
@@ -218,32 +218,36 @@ const BookingFormSection = () => {
             </form>
           </div>
 
-          <div className="booking-banner-image max-w-[clamp(29.688vw,39.005vw,39.005vw)] relative md:w-full w-full md:h-screen h-[350px] !shadow-none">
-            <img
-              src="/assets/images/backgrounds/tim.webp"
-              className="absolute left-0 w-full h-full rounded-l-[clamp(5.313vw,7.083vw,7.083vw)] object-cover background-left"
-            />
-            <div className="flex flex-col justify-end h-full">
-              <div className="relative bottom-[0px] left-[0px] z-2 p-[clamp(2.922vw,4.563vw,4.563vw)] flex items-start gap-x-[18px]">
-                <svg
-                  className="relative top-[-6px] w-[22px]"
-                  viewBox="0 0 40 40"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.27459 16.668H16.7456V32.668H0.332031V15.7666C0.332031 11.1844 1.80359 7.54121 4.74671 4.83698C7.7653 2.13276 11.7649 0.74309 16.7456 0.667969V8.21727C14.1798 8.44262 12.2932 9.15623 11.0857 10.3581C9.87831 11.4849 9.27459 13.1375 9.27459 15.3159V16.668ZM31.8008 16.668H39.2718V32.668H22.8582V15.7666C22.8582 11.1844 24.3298 7.54121 27.2729 4.83698C30.2915 2.13276 34.2911 0.74309 39.2718 0.667969V8.21727C36.706 8.44262 34.8194 9.15623 33.612 10.3581C32.4045 11.4849 31.8008 13.1375 31.8008 15.3159V16.668Z"
-                    fill="#3758F9"
-                  ></path>
-                </svg>
-                <div className="w-full text-white">
-                  <h3 className="md:text-5xl text-[20px] font-[600] mb-[12px]">
-                    I'm a big fan of oxygen.
-                  </h3>
-                  <p className="md:text-xl text-lg">Steve Wozniak</p>
-                  <p className="md:text-xl text-lg opacity-50">
-                    Co-founder at Apple
-                  </p>
+          <div className="w-full flex justify-center items-center">
+            <div className="w-[80%] md:w-full">
+              <div className="booking-banner-image md:max-w-[clamp(29.688vw,39.005vw,39.005vw)] max-w-full relative md:w-full w-full md:h-screen h-[350px] !shadow-none">
+                <img
+                  src="/assets/images/backgrounds/tim.webp"
+                  className="absolute left-0 w-full h-full rounded-l-[clamp(5.313vw,7.083vw,7.083vw)] md:rounded-r-[0px] rounded-r-[clamp(5.313vw,7.083vw,7.083vw)] object-cover background-left"
+                />
+                <div className="flex flex-col justify-end h-full">
+                  <div className="relative bottom-[0px] left-[0px] z-2 p-[clamp(2.922vw,4.563vw,4.563vw)] flex items-start gap-x-[18px]">
+                    <svg
+                      className="relative top-[-6px] w-[22px]"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9.27459 16.668H16.7456V32.668H0.332031V15.7666C0.332031 11.1844 1.80359 7.54121 4.74671 4.83698C7.7653 2.13276 11.7649 0.74309 16.7456 0.667969V8.21727C14.1798 8.44262 12.2932 9.15623 11.0857 10.3581C9.87831 11.4849 9.27459 13.1375 9.27459 15.3159V16.668ZM31.8008 16.668H39.2718V32.668H22.8582V15.7666C22.8582 11.1844 24.3298 7.54121 27.2729 4.83698C30.2915 2.13276 34.2911 0.74309 39.2718 0.667969V8.21727C36.706 8.44262 34.8194 9.15623 33.612 10.3581C32.4045 11.4849 31.8008 13.1375 31.8008 15.3159V16.668Z"
+                        fill="#3758F9"
+                      ></path>
+                    </svg>
+                    <div className="w-full text-white">
+                      <h3 className="md:text-5xl text-[20px] font-[600] mb-[12px]">
+                        I'm a big fan of oxygen.
+                      </h3>
+                      <p className="md:text-xl text-lg">Steve Wozniak</p>
+                      <p className="md:text-xl text-lg opacity-50">
+                        Co-founder at Apple
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

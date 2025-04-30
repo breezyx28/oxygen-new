@@ -106,8 +106,8 @@ export const CustomerExperinceCard1 = ({
     <div className="w-full h-auto">
       <img src={img} className="h-full w-full object-cover" />
     </div>
-    <h3 className="text-4xl font-bold">{title}</h3>
-    <h3 className="text-lg">{text}</h3>
+    <h3 className="md:text-4xl text-2xl font-bold">{title}</h3>
+    <h3 className="md:text-lg text-base">{text}</h3>
   </div>
 );
 
@@ -232,7 +232,7 @@ export const CustomerExperinceToggleFAQ = () => {
 
   return (
     <div className="w-full flex flex-col gap-y-10">
-      <h1 className="text-[52px] text-white text-center font-bold">
+      <h1 className="md:text-[52px] text-3xl leading-[1.2] text-white md:text-center text-start font-bold">
         Seamless integrations to boost your sales
       </h1>
 
@@ -249,7 +249,7 @@ export const CustomerExperinceToggleFAQ = () => {
             >
               <div className="flex items-center gap-x-4">
                 {item.icon}
-                <h2 className="text-3xl text-white font-bold">
+                <h2 className="md:text-3xl text-xl text-white font-bold">
                   {item.question}
                 </h2>
               </div>
@@ -277,7 +277,7 @@ export const CustomerExperinceToggleFAQ = () => {
                   className="overflow-hidden mt-6"
                 >
                   {item.content.length >= 10 ? (
-                    <div className="flex items-center gap-[15px]">
+                    <div className="grid md:grid-cols-10 grid-cols-3 gap-[15px]">
                       {item.content.slice(0, 10).map((logo, index) => (
                         <LogoCircleComponent key={index} src={logo} />
                       ))}{" "}
@@ -286,7 +286,7 @@ export const CustomerExperinceToggleFAQ = () => {
                       </span>
                     </div>
                   ) : (
-                    <div className="flex items-center gap-[15px]">
+                    <div className="grid md:grid-cols-10 grid-cols-3 gap-[15px]">
                       {item.content.map((logo, index) => (
                         <LogoCircleComponent key={index} src={logo} />
                       ))}
@@ -305,11 +305,11 @@ export const CustomerExperinceToggleFAQ = () => {
 export const CustomerExperinceSlider1Card = () => (
   <div className="w-full flex flex-col gap-4 border py-[14.54px] px-[12.78px] rounded-[14px]">
     <div className="w-full flex justify-between items-start">
-      <div className="flex flex-col gap-y-3 text-black/90 text-xl mt-2">
+      <div className="flex flex-col gap-y-3 text-black/90 md:text-xl text-base mt-2">
         <p className="">Inbound</p>
         <div className="flex items-center gap-1 text-base">
           <ArrowCircleUp size={14} variant="Bold" className="text-green-500" />
-          <span className="">68.9% better coaching</span>
+          <span className="md:text-base text-sm">68.9% better coaching</span>
         </div>
       </div>
       <div className="p-4 bg-black/5 rounded-full">
@@ -319,14 +319,22 @@ export const CustomerExperinceSlider1Card = () => (
     <div className="w-full py-[16px] rounded-[16px] bg-[#f3f3fb] divide divide-x flex justify-between items-center">
       <div className="w-1/2 flex items-center justify-center">
         <div className="flex flex-col">
-          <p className="text-lg text-black leading-[1.2]">Test Team</p>
-          <p className="text-[14px] text-black/70 leading-[1.2]">37 Calls</p>
+          <p className="md:text-lg text-base text-black leading-[1.2]">
+            Test Team
+          </p>
+          <p className="md:text-[14px] text-[12px] text-black/70 leading-[1.2]">
+            37 Calls
+          </p>
         </div>
       </div>
       <div className="w-1/2 flex items-center justify-center">
         <div className="flex flex-col">
-          <p className="text-lg text-black leading-[1.2]">Test Team</p>
-          <p className="text-[14px] text-black/70 leading-[1.2]">37 Calls</p>
+          <p className="md:text-lg text-base text-black leading-[1.2]">
+            Test Team
+          </p>
+          <p className="md:text-[14px] text-[12px] text-black/70 leading-[1.2]">
+            37 Calls
+          </p>
         </div>
       </div>
     </div>
@@ -334,22 +342,30 @@ export const CustomerExperinceSlider1Card = () => (
 );
 
 export const CustomerExperinceSlider2Card = () => (
-  <div className="w-full p-[32px] rounded-[38px] border">
-    <div className="w-full h-auto flex flex-col gap-y-[80px]">
+  <div className="md:w-full w-[200px] md:p-[32px] p-[22px] md:rounded-[38px] rounded-[22px] border">
+    <div className="w-full h-auto flex flex-col md:gap-y-[80px] gap-y-[30px]">
       <div className="flex justify-between items-center">
-        <div className="bg-amber-100 p-6 rounded-full">
-          <Call size={32} variant="Bold" className="text-amber-400" />
+        <div className="bg-amber-100 md:p-6 p-2 rounded-full">
+          <Call
+            variant="Bold"
+            className="text-amber-400 md:w-[32px] w-[18px]"
+          />
         </div>
-        <h2 className="text-black/70 text-[28px] leading-[1.1]">Last month</h2>
+        <h2 className="text-black/70 md:text-[28px] text-[14px] leading-[1.1]">
+          Last month
+        </h2>
       </div>
       <div className="flex justify-between items-end">
-        <div className="flex flex-col gap-y-2">
-          <h5 className="text-2xl text-black/70">Phone calls</h5>
-          <h2 className="text-black/90 text-6xl">6,513</h2>
+        <div className="flex flex-col md:gap-y-2 gap-y-0">
+          <h5 className="md:text-2xl text-[14px] text-black/70">Phone calls</h5>
+          <h2 className="text-black/90 md:text-6xl text-2xl">6,513</h2>
         </div>
         <div className="flex items-center gap-1">
-          <ArrowCircleUp size={34} variant="Bold" className="text-green-500" />
-          <span className="text-[28px] leading-[1.2]">8%</span>
+          <ArrowCircleUp
+            variant="Bold"
+            className="text-green-500 md:w-[3px] w-[20px]"
+          />
+          <span className="md:text-[28px] text-[14px] leading-[1.2]">8%</span>
         </div>
       </div>
     </div>
@@ -410,15 +426,11 @@ export const CustomerExperinceCard3 = ({
   title: string;
   text: string;
 }) => (
-  <div className="flex items-center gap-8">
+  <div className="flex items-center md:gap-8 gap-4">
     <div
-      className="icon rounded-[0.83vw]"
+      className="icon rounded-[0.83vw] md:max-w-[8.229vw] max-w-auto md:max-h-[8.229vh] max-h-auto"
       style={{
         boxShadow: "0 7px 32px 0 rgba(11,16,41,.051)",
-        maxHeight: "8.229vw",
-        maxWidth: "8.229vw",
-        minHeight: "8.229vw",
-        minWidth: "8.229vw",
       }}
     >
       <img
@@ -453,14 +465,17 @@ export const CustomerExperinceCard4 = ({
         "linear-gradient(160deg,hsla(0,0%,100%,.1) 60.8%,hsla(0,0%,100%,0) 100.09%)",
     }}
   >
-    <div className="flex flex-col gap-y-[80px]">
+    <div className="flex flex-col md:gap-y-[80px] gap-y-[30px]">
       {icon ?? (
-        <CallIncoming size={45} variant="Bold" className="text-whit/20" />
+        <CallIncoming
+          variant="Bold"
+          className="md:w-[45px] w-[24px] text-whit/20"
+        />
       )}
 
-      <div className="flex justify-between items-center">
-        <div className="flex flex-col gap-y-4">
-          <p className="text-white text-2xl font-bold">{title}</p>
+      <div className="flex md:flex-row flex-col justify-between md:items-center items-start gap-y-3">
+        <div className="flex flex-col md:gap-y-4 gap-y-0">
+          <p className="text-white md:text-2xl text-xl font-bold">{title}</p>
           <p className="text-white text-sm">{subtitle}</p>
         </div>
         <OutlineButton
