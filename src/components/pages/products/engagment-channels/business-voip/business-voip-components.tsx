@@ -207,7 +207,7 @@ export const VoipPlatformsReviewsCard = ({
           <img src={icon} className="h-[60px] max-w-[150px] object-contain" />
         </div>
         <div className="flex items-center justify-center gap-x-1">
-          {[...Array(Math.floor(rate))].map((_, index) => (
+          {[...Array(Math.min(10, Math.floor(rate)))].map((_, index) => (
             <span
               key={`full-${index}`}
               className="full-star w-[clamp(1.275rem,-.125rem_+_2.9167vw,2.5rem)]"
@@ -242,6 +242,9 @@ export const VoipPlatformsReviewsCard = ({
                 ></path>
               </svg>
             </span>
+          )}
+          {Math.floor(rate) > 10 && (
+            <span className="text-primary-600 font-bold">+ many more</span>
           )}
         </div>
       </div>

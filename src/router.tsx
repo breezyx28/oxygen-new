@@ -11,6 +11,7 @@ import CustomersReviews from "./components/pages/products/engagment-channels/cus
 import { LiveChat } from "./components/pages/products/engagment-channels/live-chat";
 import { BusinessVoip } from "./components/pages/products/engagment-channels/business-voip";
 import CustomerCommunication from "./components/pages/products/engagment-channels/customer-communication";
+import CustomerExperince from "./components/pages/products/customer-experince";
 
 const AppRouter: React.FC = () => {
   return (
@@ -40,6 +41,10 @@ const AppRouter: React.FC = () => {
           <Route
             path="/products/customer-communication"
             element={<CustomerCommunication />}
+          />
+          <Route
+            path="/products/customer-experince"
+            element={<CustomerExperince />}
           />
         </Routes>
       </Layout>

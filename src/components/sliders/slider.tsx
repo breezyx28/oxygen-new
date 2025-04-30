@@ -8,6 +8,7 @@ interface SliderComponentProps {
   speed?: number;
   autoplay?: boolean;
   pauseOnHover?: boolean;
+  rtl?: boolean;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ const SliderComponent: React.FC<SliderComponentProps> = ({
   speed = 3000,
   autoplay = true,
   pauseOnHover = false,
+  rtl = false,
   className = "",
 }) => {
   const settings = {
@@ -29,6 +31,7 @@ const SliderComponent: React.FC<SliderComponentProps> = ({
     speed,
     autoplaySpeed: 0,
     cssEase: "linear",
+    rtl: rtl,
     pauseOnHover,
     responsive: [
       {
