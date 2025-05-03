@@ -1,6 +1,6 @@
 import Button from "@/components/buttons/button";
 import PageBadge from "@/components/cards/page-badge";
-import { Monitor, Refresh, Shield, ShieldTick, Star1 } from "iconsax-react";
+import { Monitor, Refresh, ShieldTick, Star1 } from "iconsax-react";
 import {
   EnterpriseContactCenterCard1,
   EnterpriseContactCenterCard2,
@@ -55,7 +55,7 @@ export default function EnterpriseContactCenter() {
             />
           </div>
 
-          <div className="flex items-center justify-between gap-6 mt-10">
+          <div className="flex md:flex-row flex-col items-center justify-between gap-6 mt-10">
             <EnterpriseContactCenterCard1 />
             <EnterpriseContactCenterCard1 />
             <EnterpriseContactCenterCard1 />
@@ -66,11 +66,11 @@ export default function EnterpriseContactCenter() {
       <SectionLayout img="/assets/images/backgrounds/products/enterprise-contact-center-bg-1.webp">
         <div className="relative container-container container-narrow">
           <div className="flex flex-col gap-y-12">
-            <h3 className="text-5xl text-disabled text-center font-bold">
+            <h3 className="md:text-5xl text-3xl text-disabled text-center font-bold">
               Goodbye siloed solutions. Hello frictionless{" "}
               <span className="text-white">omnichannel</span> conversations.
             </h3>
-            <div className="flex items-center gap-10">
+            <div className="flex md:flex-row flex-col items-center gap-10">
               <EnterpriseContactCenterCard2 />
               <EnterpriseContactCenterCard2 />
               <EnterpriseContactCenterCard2 />
@@ -79,11 +79,11 @@ export default function EnterpriseContactCenter() {
               <div className="h-[100px] w-[1px] bg-white"></div>
             </div>
             <div className="flex flex-col gap-y-8">
-              <h3 className="text-5xl text-disabled font-bold text-center">
+              <h3 className="md:text-5xl text-3xl text-disabled font-bold text-center">
                 Built for tomorrow
               </h3>
               <div className="flex items-center justify-center mt-6">
-                <div className="w-[fit-content] rounded-[32px] bg-white px-[60px] py-[24px] text-5xl font-bold">
+                <div className="w-[fit-content] rounded-[32px] bg-white px-[60px] py-[24px] md:text-5xl text-4xl font-bold text-center">
                   <span
                     style={{
                       background:
@@ -105,7 +105,7 @@ export default function EnterpriseContactCenter() {
 
       <SectionLayout img="/assets/images/backgrounds/products/enterprise-contact-center-bg-2.webp">
         <div className="relative container-container container-narrow">
-          <div className="flex flex-col gap-y-[200px]">
+          <div className="flex flex-col md:gap-y-[200px] gap-y-[100px]">
             <div className="flex flex-col justify-between items-center gap-y-2">
               <h3 className="text-white text-4xl font-bold">
                 Deliver business results that count
@@ -119,7 +119,7 @@ export default function EnterpriseContactCenter() {
               <h3 className="text-disabled text-2xl font-bold text-center">
                 Nextiva customers can experience:
               </h3>
-              <div className="grid grid-cols-3 gap-[20px]">
+              <div className="grid md:grid-cols-3 grid-cols-1 gap-[20px]">
                 <EnterpriseContactCenterCard3 />
                 <EnterpriseContactCenterCard3 />
                 <EnterpriseContactCenterCard3 />
@@ -141,10 +141,10 @@ export default function EnterpriseContactCenter() {
 
       <section>
         <div className="container-container container-narrow">
-          <div className="flex md:flex-row flex-col items-center justify-between">
-            <div className="flex flex-col gap-y-[120px]">
+          <div className="flex md:flex-row flex-col items-center justify-between gap-[20px]">
+            <div className="flex flex-col md:gap-y-[120px] gap-y-[40px]">
               <div className="flex flex-col gap-y-6">
-                <h3 className="text-5xl font-bold text-black/50">
+                <h3 className="md:text-5xl text-3xl font-bold text-black/50">
                   <span className="text-black">Simplify</span> your business
                   operations
                 </h3>
@@ -195,6 +195,7 @@ export default function EnterpriseContactCenter() {
           </div>
         </div>
       </section>
+
       <SectionLayout img="/assets/images/backgrounds/products/customer-experince-bg-4.webp">
         <div className="relative container-container container-narrow">
           <EnterpriseContactCenterToggleFAQ />
@@ -213,7 +214,7 @@ export default function EnterpriseContactCenter() {
             <h3 className="text-white text-3xl font-bold text-center">
               Future-proof your business
             </h3>
-            <div className="h-full grid grid-cols-2 gap-6">
+            <div className="h-full grid md:grid-cols-2 grid-cols-1 gap-6">
               <div className="p-[32px] rounded-[1.5rem] bg-white">
                 <div className="flex flex-col gap-y-8">
                   <h3 className="text-2xl font-bold">100% hybrid cloud</h3>
@@ -280,26 +281,28 @@ export default function EnterpriseContactCenter() {
         <div className="w-full container-narrow">
           <div className="container-container">
             <div className="flex flex-col items-center gap-8">
-              <div className="w-full">
+              <div className="w-full flex items-center justify-center">
                 <PageBadge
                   text="ROI"
                   icon={<Refresh size={24} className="text-primary-600" />}
                 />
               </div>
-              <div className="flex items-center justify-center gap-12">
-                <div className="flex items-center gap-5">
+              <div className="flex md:flex-row flex-col md:items-center items-start justify-center md:gap-12 gap-4">
+                <div className="flex items-center md:gap-5 gap-3">
                   <Check className="text-primary-600" />
-                  <span className="text-black/70">Immediate provisioning</span>
+                  <span className="md:text-base text-sm text-black/70">
+                    Immediate provisioning
+                  </span>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center md:gap-5 gap-3">
                   <Check className="text-primary-600" />
-                  <span className="text-black/70">
+                  <span className="md:text-base text-sm text-black/70">
                     Implementation at the speed of your business
                   </span>
                 </div>
-                <div className="flex items-center gap-5">
+                <div className="flex items-center md:gap-5 gap-3">
                   <Check className="text-primary-600" />
-                  <span className="text-black/70">
+                  <span className="md:text-base text-sm text-black/70">
                     Enterprise Implementation
                   </span>
                 </div>
@@ -330,26 +333,29 @@ export default function EnterpriseContactCenter() {
                   internal compliance efforts.
                 </p>
               </div>
-              <div className="flex items-center gap-8">
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 <img
                   src="/assets/icons/companies/hitrust.svg"
-                  className="w-[200px]"
+                  className="md:w-[200px] w-[100px]"
                 />
                 <img
                   src="/assets/icons/companies/hitrust.svg"
-                  className="w-[200px]"
+                  className="md:w-[200px] w-[100px]"
                 />
                 <img
                   src="/assets/icons/companies/hitrust.svg"
-                  className="w-[200px]"
+                  className="md:w-[200px] w-[100px]"
                 />
                 <img
                   src="/assets/icons/companies/hitrust.svg"
-                  className="w-[200px]"
+                  className="md:w-[200px] w-[100px]"
                 />
               </div>
-              <div className="text-white flex items-center gap-4">
-                <ShieldTick variant="Bold" className="text-white" />
+              <div className="text-white flex md:items-center items-start gap-4">
+                <ShieldTick
+                  variant="Bold"
+                  className="text-white md:w-auto w-[64px]"
+                />
                 <span className="text-white/70">
                   We’re enterprise-grade, so you can focus on delivering amazing
                   experiences with the trust that we have your back.
@@ -365,7 +371,7 @@ export default function EnterpriseContactCenter() {
       <section>
         <div className="container-container container-narrow">
           <div className="flex flex-col gap-y-12">
-            <h3 className="text-start text-7xl text-black/30 font-bold">
+            <h3 className="text-start md:text-7xl text-4xl text-black/30 font-bold">
               <span className="text-black">
                 1 Million+ users. 100,000+ customers.
               </span>{" "}

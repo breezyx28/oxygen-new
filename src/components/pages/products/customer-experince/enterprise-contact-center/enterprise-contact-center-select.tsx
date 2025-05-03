@@ -47,7 +47,7 @@ const EnterpriseContactCenterSelect = () => {
       <div className="w-full">
         <div className="md:bg-[#f9fafe] bg-transparent pt-[80px] md:border-b border-none">
           <div className="container-container flex justify-start items-center pb-12">
-            <div className="text-center text-5xl font-bold">
+            <div className="text-center md:text-5xl text-3xl font-bold">
               The award-winning Contact Center. Endless CX superpowers.
             </div>
           </div>

@@ -29,7 +29,7 @@ export const EnterpriseContactCenterCard1 = () => (
           <span className="text-[14px] text-black/50 leading-[1.8]">/5</span>
         </div>
         <div className="stars flex items-center gap-x-2">
-          {[1, 2, 3, 4, 5].map((item, index) => (
+          {[1, 2, 3, 4, 5].map((index) => (
             <StarIcon key={index} />
           ))}
         </div>
@@ -72,8 +72,8 @@ export const EnterpriseContactCenterPanel = ({
   subtitle,
   image,
 }: EnterpriseContactCenterPanelProps) => (
-  <div className="py-[80px] flex md:flex-row flex-col justify-between items-start gap-[75px]">
-    <div className="w-[50%] flex flex-col gap-y-[clamp(2rem,2.13vw,3rem)]">
+  <div className="py-[80px] flex md:flex-row flex-col justify-between items-start md:gap-[75px] gap-y-0">
+    <div className="md:w-[50%] w-full flex flex-col gap-y-[clamp(2rem,2.13vw,3rem)]">
       <PageBadge
         text={badgeText}
         icon={<Category variant="Bold" className="text-primary-600" />}
@@ -85,7 +85,7 @@ export const EnterpriseContactCenterPanel = ({
         <p className="text-black/70 text-[15px] leading-[1.2]">{subtitle}</p>
       </div>
     </div>
-    <div className="w-[50%] h-[500px]">
+    <div className="md:w-[50%] w-full h-[500px]">
       <img
         src={image}
         className="w-auto h-full rounded-[24px] object-contain"
@@ -97,7 +97,7 @@ export const EnterpriseContactCenterPanel = ({
 export const EnterpriseContactCenterCard3 = () => (
   <div className="border border-white rounded-[24px] bg-white/20 p-[24px]">
     <div className="flex flex-col gap-y-[32px] items-center">
-      <div className="flex flex-col gap-y-1 text-white font-bold text-2xl">
+      <div className="flex md:flex-col flex-row gap-y-1 text-white font-bold text-2xl">
         <p className="">99.9999%</p>
         <p className="">reliability</p>
       </div>
@@ -110,11 +110,11 @@ export const EnterpriseContactCenterCard3 = () => (
 );
 
 export const EnterpriseContactCenterCard4 = () => (
-  <div className="py-[40px] px-[80px] rounded-[32px] bg-white border">
-    <div className="flex justify-between items-center">
-      <div className="w-[51%] flex flex-col gap-y-6">
+  <div className="py-[40px] md:px-[80px] px-[20px] rounded-[32px] bg-white border">
+    <div className="flex md:flex-row flex-col-reverse justify-between items-center">
+      <div className="md:w-[51%] w-full flex flex-col gap-y-6">
         <div className="flex flex-col gap-y-4">
-          <h3 className="text-black text-3xl font-bold">
+          <h3 className="text-black md:text-3xl text-xl font-bold">
             Improve CSAT and NPS
           </h3>
           <p className="text-black/80 text-base">
@@ -135,7 +135,7 @@ export const EnterpriseContactCenterCard4 = () => (
           </h5>
         </div>
       </div>
-      <div className="w-[36%]">
+      <div className="md:w-[36%] w-full">
         <img
           src="/assets/images/backgrounds/products/enterprise-contact-center-cover-1.webp"
           className=""
@@ -335,7 +335,7 @@ export const EnterpriseContactCenterToggleFAQ = () => {
 };
 
 export const EnterpriseContactCenterSliderCard1 = () => (
-  <div className="p-[16px] border rounded-[16px]">
+  <div className="p-[16px] border rounded-[16px] max-w-[250px] md:max-w-full w-full">
     <h4 className="text-xl font-bold">Modern Architecture Platform</h4>
     <p className="mt-4 text-base text-black/70">
       Benefit from continuous enhancements with 150 features delivered last
@@ -370,11 +370,14 @@ export const EnterpriseContactCenterSlider1 = () => {
 export const EnterpriseContactCenterCard6 = () => (
   <div className="p-[24px] rounded-[24px] bg-black/5">
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col md:gap-5 gap-3">
         <div className="stars">
-          <img src="/assets/icons/companies/g2.png" className="w-[40px]" />
+          <img
+            src="/assets/icons/companies/g2.png"
+            className="md:w-[40px] w-[30px]"
+          />
         </div>
-        <div className="rate flex items-center justify-between">
+        <div className="rate flex items-center md:justify-between justify-start gap-2">
           <StarIcon />
           <StarIcon />
           <StarIcon />
@@ -382,11 +385,11 @@ export const EnterpriseContactCenterCard6 = () => (
           <StarIcon />
         </div>
       </div>
-      <div className="flex flex-col gap-5">
-        <p className="rate text-5xl font-bold">
+      <div className="flex flex-col md:gap-5 gap-3">
+        <p className="rate md:text-5xl text-4xl font-bold">
           4.8 <span className="text-xl">/5</span>
         </p>
-        <div className="rate text-black/30 flex items-center gap-2">
+        <div className="rate text-black/50 flex items-center gap-2">
           <Award size={18} variant="Bold" />
           <span className="text-sm">Based on 5,310+ reviews</span>
         </div>
