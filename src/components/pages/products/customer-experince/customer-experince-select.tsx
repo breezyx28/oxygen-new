@@ -1,4 +1,3 @@
-import SelectOptions from "@/components/inputs/select/select-options";
 import { CustomerExperinceCard2 } from "./customer-experince-component";
 import { Monitor } from "iconsax-react";
 import { useState } from "react";

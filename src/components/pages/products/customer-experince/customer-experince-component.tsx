@@ -2,7 +2,6 @@ import TrustedCompaniesSlider from "@/components/sliders/trusted-companies-slide
 import {
   ArrowCircleUp,
   ArrowRight,
-  ArrowUp,
   Call,
   CallIncoming,
   Heart,

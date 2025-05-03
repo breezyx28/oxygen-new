@@ -12,6 +12,7 @@ import { LiveChat } from "./components/pages/products/engagment-channels/live-ch
 import { BusinessVoip } from "./components/pages/products/engagment-channels/business-voip";
 import CustomerCommunication from "./components/pages/products/engagment-channels/customer-communication";
 import CustomerExperince from "./components/pages/products/customer-experince";
+import EnterpriseContactCenter from "./components/pages/products/customer-experince/enterprise-contact-center";
 
 const AppRouter: React.FC = () => {
   return (
@@ -45,6 +46,12 @@ const AppRouter: React.FC = () => {
           <Route
             path="/products/customer-experince"
             element={<CustomerExperince />}
+          />
+
+          {/* Solutions */}
+          <Route
+            path="/solutions/enterprise-contact-center"
+            element={<EnterpriseContactCenter />}
           />
         </Routes>
       </Layout>
