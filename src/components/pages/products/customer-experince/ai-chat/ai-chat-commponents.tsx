@@ -1,11 +1,5 @@
 import TrustedCompaniesSlider from "@/components/sliders/trusted-companies-slider";
-import {
-  ArrowCircleUp2,
-  ArrowUp,
-  Heart,
-  Message,
-  Translate,
-} from "iconsax-react";
+import { ArrowCircleUp2, Heart, Message, Translate } from "iconsax-react";
 
 export const TrustedAiChatCard = () => {
   return (
