@@ -3,12 +3,17 @@ import { twMerge } from "tailwind-merge";
 type StackedAvatarsProps = {
   imgs: string[];
   imgsStyle?: string;
+  className?: string;
 };
 
-const StackedAvatars = ({ imgs, imgsStyle }: StackedAvatarsProps) => {
+const StackedAvatars = ({
+  imgs,
+  imgsStyle,
+  className,
+}: StackedAvatarsProps) => {
   const maxZIndex = imgs.length + 1;
   return (
-    <div className="flex items-center space-x-2">
+    <div className={twMerge("flex items-center space-x-2", className)}>
       <div className="flex">
         {imgs.map((img, index) => (
           <img
