@@ -14,6 +14,7 @@ import CustomerCommunication from "./components/pages/products/engagment-channel
 import CustomerExperince from "./components/pages/products/customer-experince";
 import EnterpriseContactCenter from "./components/pages/products/customer-experince/enterprise-contact-center";
 import AiChat from "./components/pages/products/customer-experince/ai-chat";
+import Customerjourney from "./components/pages/products/customer-experince/customer-journey";
 
 const AppRouter: React.FC = () => {
   return (
@@ -49,6 +50,11 @@ const AppRouter: React.FC = () => {
             element={<CustomerExperince />}
           />
           <Route path="/products/ai-chat" element={<AiChat />} />
+
+          <Route
+            path="/products/customer-journey"
+            element={<Customerjourney />}
+          />
 
           {/* Solutions */}
           <Route

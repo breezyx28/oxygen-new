@@ -2,7 +2,11 @@ import "../../../styles/booking-form.css";
 import { useState } from "react";
 import { Play } from "iconsax-react";
 
-const BookingFormSection = () => {
+type BookingFormSectionProps = {
+  img?: string;
+};
+
+const BookingFormSection = ({ img }: BookingFormSectionProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -222,7 +226,7 @@ const BookingFormSection = () => {
             <div className="w-[80%] md:w-full">
               <div className="booking-banner-image md:max-w-[clamp(29.688vw,39.005vw,39.005vw)] max-w-full relative md:w-full w-full md:h-screen h-[350px] !shadow-none">
                 <img
-                  src="/assets/images/backgrounds/tim.webp"
+                  src={img ? img : "/assets/images/backgrounds/tim.webp"}
                   className="absolute left-0 w-full h-full rounded-l-[clamp(5.313vw,7.083vw,7.083vw)] md:rounded-r-[0px] rounded-r-[clamp(5.313vw,7.083vw,7.083vw)] object-cover background-left"
                 />
                 <div className="flex flex-col justify-end h-full">
