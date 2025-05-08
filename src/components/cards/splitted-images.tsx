@@ -9,8 +9,8 @@ export const SplittedImages = ({
   img2,
   imgCaption,
 }: SplittedImagesProps) => (
-  <div className="hero relative h-[520px] w-full rounded-[32px] flex gap-8 items-center justify-center">
-    <div className="relative w-[40%] h-full flex flex-col justify-end text-start">
+  <div className="hero relative md:h-[520px] h-auto w-full rounded-[32px] flex md:flex-row flex-col gap-8 items-center justify-center">
+    <div className="relative md:w-[40%] w-full h-full flex flex-col justify-end text-start">
       <img
         src={
           img1 ??
@@ -31,7 +31,7 @@ export const SplittedImages = ({
         img2 ??
         "/assets/images/backgrounds/products/messegaging-hero-background-2.png"
       }
-      className="w-[60%] h-full rounded-[32px] object-cover"
+      className="md:w-[60%] w-full h-full rounded-[32px] object-cover"
     />
   </div>
 );
@@ -41,15 +41,15 @@ export const SplittedImagesLTR = ({
   img2,
   imgCaption,
 }: SplittedImagesProps) => (
-  <div className="hero relative h-[520px] w-full rounded-[32px] flex gap-8 items-center justify-center">
+  <div className="hero relative md:h-[520px] h-auto w-full rounded-[32px] flex md:flex-row flex-col gap-8 items-center justify-center">
     <img
       src={
         img2 ??
         "/assets/images/backgrounds/products/messegaging-hero-background-2.png"
       }
-      className="w-[60%] h-full rounded-[32px] object-cover"
+      className="md:w-[60%] w-full h-full rounded-[32px] object-cover"
     />
-    <div className="relative w-[40%] h-full flex flex-col justify-end text-start">
+    <div className="relative md:w-[40%] w-full h-full flex flex-col justify-end text-start">
       <img
         src={
           img1 ??

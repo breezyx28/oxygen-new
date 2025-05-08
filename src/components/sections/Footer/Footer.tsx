@@ -16,7 +16,7 @@ const Footer = () => {
                 Unified Customer Experience Management Platform
               </p>
             </div>
-            <div className="">
+            <div className="md:mb-0 mb-4">
               {" "}
               <button className="mt-6 flex items-center gap-2 px-6 py-4 border border-gray-800 rounded-full">
                 Download oxygen <span className="rotate-180">▼</span>

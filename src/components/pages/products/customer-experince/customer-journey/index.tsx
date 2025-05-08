@@ -46,18 +46,18 @@ const Customerjourney = () => {
           </div>
 
           <div className="hero relative w-full h-full rounded-[32px] flex gap-4 items-center justify-center">
-            <div className="relative h-[490px] w-[33%] flex flex-col justify-end text-start">
+            <div className="relative h-[490px] md:w-[33%] w-full flex flex-col justify-end text-start">
               <img
                 src="/assets/images/backgrounds/products/customer-journey-hero-bg-2.webp"
                 className="absolute w-full h-full rounded-[32px] object-cover z-10"
               />
-              <h3 className="text-white text-5xl font-bold p-[40px] z-20">
+              <h3 className="text-white md:text-5xl text-2xl md:font-bold font-normal md:p-[40px] p-[20px] z-20">
                 Know your customers inside out
               </h3>
             </div>
             <img
               src="/assets/images/backgrounds/products/customer-journey-hero-bg-1.webp"
-              className="w-[66%] h-[490px] rounded-[32px] object-cover"
+              className="w-[66%] h-[490px] rounded-[32px] object-cover md:block hidden"
             />
           </div>
         </div>
@@ -78,17 +78,17 @@ const Customerjourney = () => {
                   <div className="flex items-center gap-6">
                     <div className="flex items-center gap-2 rounded-lg bg-white px-3 py-2">
                       <Danger variant="Bold" className="text-red-500" />
-                      <span className="text-lg">Problem</span>
+                      <span className="md:text-lg text-base">Problem</span>
                     </div>
                     <div className="flex items-center gap-2 rounded-lg bg-white px-3 py-2">
                       <TickCircle variant="Bold" className="text-primary-600" />
-                      <span className="text-lg">Solution</span>
+                      <span className="md:text-lg text-base">Solution</span>
                     </div>
                   </div>
-                  <h4 className="text-start text-white text-5xl font-bold ">
+                  <h4 className="text-start text-white md:text-5xl text-3xl font-bold ">
                     The complexity of customer relationships is growing
                   </h4>
-                  <p className="text-white/70 text-xl">
+                  <p className="text-white/70 md:text-xl text-base">
                     There are more ways to connect and manage customers but they
                     are not integrated, resulting in a fragmented, incomplete
                     understanding of customers.
@@ -96,13 +96,13 @@ const Customerjourney = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full border-l border-white/50">
-              <div className="flex gap-6">
-                <div className="flex flex-col gap-[20px]">
+            <div className="w-full md:border-l border-none border-white/50">
+              <div className="flex md:flex-row flex-col gap-6">
+                <div className="md:flex hidden flex-col gap-[20px]">
                   <div className="h-[40px]"></div>
                   <div className="w-[3px] h-[100px] bg-white mt-[40px]"></div>
                 </div>
-                <div className="numbers ml-[30px] h-full flex-1 flex flex-col justify-center gap-[20px]">
+                <div className="numbers ml-[30px] h-full flex-1 md:flex hidden flex-col justify-center gap-[20px]">
                   <div className="h-[40px]"></div>
                   <div className="my-[38px] h-[90px] flex flex-col justify-center text-white/50 text-5xl font-bold">
                     01
@@ -160,7 +160,7 @@ const Customerjourney = () => {
         <div className="container-container container-narrow">
           <div className="flex flex-col items-center gap-y-10">
             <OxygenBadge />
-            <h2 className="text-6xl font-bold text-center">
+            <h2 className="md:text-6xl text-3xl font-bold text-center">
               Improve every interaction with customer journey orchestration
             </h2>
             <div className="h-full">
@@ -178,14 +178,19 @@ const Customerjourney = () => {
           <div className="flex flex-col items-center gap-y-6">
             <OxygenBadge />
 
-            <h2 className="text-6xl font-bold">
+            <h2 className="md:text-6xl text-3xl font-bold text-center">
               <span className="underline text-primary-600">
                 Journey orchestration
               </span>{" "}
               at work
             </h2>
 
-            <div className="flex flex-col gap-y-10 mt-12">
+            <p className="text-black/70 text-center">
+              Predict your customer’s needs in real time with AI-powered sales,
+              service, and marketing.
+            </p>
+
+            <div className="flex flex-col md:gap-y-10 gap-y-6 md:mt-12 mt-6">
               <SplittedImages
                 img1="/assets/images/backgrounds/products/customer-journey-cover-1.webp"
                 img2="/assets/images/backgrounds/products/customer-journey-cover-2.webp"
@@ -242,10 +247,12 @@ const Customerjourney = () => {
 
       <SectionLayout img="/assets/images/backgrounds/products/customer-journey-bg-3.webp">
         <div className="relative container-container container-narrow">
-          <div className="flex flex-col gap-y-12">
+          <div className="flex flex-col items-center gap-y-12">
             <OxygenBadge />
-            <h3 className="text-white font-bold text-5xl">Key advantages</h3>
-            <div className="grid grid-cols-3 gap-[clamp(1.5rem,1.42vw,2rem)]">
+            <h3 className="text-white font-bold md:text-5xl text-4xl">
+              Key advantages
+            </h3>
+            <div className="grid md:grid-cols-3 grid-cols-1 gap-[clamp(1.5rem,1.42vw,2rem)]">
               <CustomerJourneyCard2
                 title="Seamless interactions"
                 text="Proactive context awareness reduces friction for both customers and agents and promotes loyalty."
