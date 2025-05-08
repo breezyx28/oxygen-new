@@ -25,6 +25,7 @@ const Navbar = () => {
     "/products/customer-journey",
     "/products/customers-reviews",
     "/products/ai-chat",
+    "/products/intelligent-virtual-agent",
   ].includes(currentPath);
 
   // Close menu when scrolling
