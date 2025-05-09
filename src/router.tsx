@@ -16,6 +16,7 @@ import EnterpriseContactCenter from "./components/pages/products/customer-experi
 import AiChat from "./components/pages/products/customer-experince/ai-chat";
 import Customerjourney from "./components/pages/products/customer-experince/customer-journey";
 import IntelligentVirtualAgent from "./components/pages/products/customer-experince/intelligent-virtual-agent";
+import IntelligentRoutingSkills from "./components/pages/products/customer-experince/intelligent-routing-skills";
 
 const AppRouter: React.FC = () => {
   return (
@@ -59,6 +60,10 @@ const AppRouter: React.FC = () => {
           <Route
             path="/products/intelligent-virtual-agent"
             element={<IntelligentVirtualAgent />}
+          />
+          <Route
+            path="/products/intelligent-routing-skills"
+            element={<IntelligentRoutingSkills />}
           />
 
           {/* Solutions */}

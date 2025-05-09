@@ -38,7 +38,7 @@ import BookingForm from "@/components/sections/booking-form";
 const IntelligentVirtualAgent = () => {
   return (
     <>
-      <section id="products-digital-channels" className="h-auto w-full">
+      <section className="h-auto w-full">
         <div className="container-container pt-[120px]">
           <div className="head flex flex-col justify-center items-center gap-y-[8px]">
             <PageBadge
@@ -69,7 +69,7 @@ const IntelligentVirtualAgent = () => {
         </div>
       </section>
 
-      <section id="products-digital-channels-trust-slider">
+      <section>
         <div className="container-container pt-[70px] !text-black">
           <TrustedBy />
         </div>
