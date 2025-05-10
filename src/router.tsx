@@ -17,6 +17,7 @@ import AiChat from "./components/pages/products/customer-experince/ai-chat";
 import Customerjourney from "./components/pages/products/customer-experince/customer-journey";
 import IntelligentVirtualAgent from "./components/pages/products/customer-experince/intelligent-virtual-agent";
 import IntelligentRoutingSkills from "./components/pages/products/customer-experince/intelligent-routing-skills";
+import AICapabilities from "./components/pages/products/ai-capabilities";
 
 const AppRouter: React.FC = () => {
   return (
@@ -71,6 +72,9 @@ const AppRouter: React.FC = () => {
             path="/solutions/enterprise-contact-center"
             element={<EnterpriseContactCenter />}
           />
+
+          {/* Resources */}
+          <Route path="/resources/learn" element={<AICapabilities />} />
         </Routes>
       </Layout>
     </Router>
