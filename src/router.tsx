@@ -19,7 +19,8 @@ import IntelligentVirtualAgent from "./components/pages/products/customer-experi
 import IntelligentRoutingSkills from "./components/pages/products/customer-experince/intelligent-routing-skills";
 import AICapabilities from "./components/pages/products/ai-capabilities";
 import KnowledeBaseAI from "./components/pages/products/ai-capabilities/knowledge-base";
-import LiveTransactionSummary from "./components/pages/products/ai-capabilities/live-transaction-summary";
+import LiveTranscriptionSummary from "./components/pages/products/ai-capabilities/live-transcription-summary";
+import TextToSpeechSpeechToText from "./components/pages/products/ai-capabilities/text-to-speech-speech-to-text";
 
 const AppRouter: React.FC = () => {
   return (
@@ -82,8 +83,12 @@ const AppRouter: React.FC = () => {
             element={<KnowledeBaseAI />}
           />
           <Route
-            path="/resources/learn/live-transaction-summary"
-            element={<LiveTransactionSummary />}
+            path="/resources/learn/live-transcription-summary"
+            element={<LiveTranscriptionSummary />}
+          />
+          <Route
+            path="/resources/learn/text-to-speech-speech-to-text"
+            element={<TextToSpeechSpeechToText />}
           />
         </Routes>
       </Layout>

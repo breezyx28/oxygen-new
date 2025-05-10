@@ -3,14 +3,15 @@ import PageBadge from "@/components/cards/page-badge";
 import ComputerScreenIcon from "@/components/icons/computer-screen-icon";
 import SectionLayout from "@/components/Layout/section-layout";
 import { Global } from "iconsax-react";
-import {
-  LiveTransactionSummaryCard1,
-  LiveTransactionSummaryToggler,
-} from "./live-transaction-summary-component";
+
 import CTASection1 from "@/components/cards/cta-card";
 import OutlineButton from "@/components/buttons/outline-button";
+import {
+  TextToSpeechSpeechToTextCard1,
+  TextToSpeechSpeechToTextToggler,
+} from "./text-to-speech-speech-to-text-component";
 
-export default function LiveTransactionSummary() {
+export default function TextToSpeechSpeechToText() {
   return (
     <>
       <section className="h-auto w-full">
@@ -18,23 +19,28 @@ export default function LiveTransactionSummary() {
           <div className="md:w-1/2 w-full flex flex-col justify-start gap-y-[8px]">
             <PageBadge
               icon={<ComputerScreenIcon className="md:w-[20px] w-[16px]" />}
-              text="AI Use Case"
+              text="Platform"
             />
             <h3 className="md:text-[56px] text-[39px] font-bold md:leading-[1.2] leading-[1.1]">
-              Real-Time Transcription and Summarization
+              Transform Your CX with Text-to-Speech Technologies
             </h3>
             <div className="max-w-[720px]">
               <p className="text-black/70 md:text-[20px] text-[14px]">
-                Improve call management with instant transcription and
-                summarization. Make every conversation count and save time on
-                every call.
+                Transform interactions with Nextiva Contact Center’s voice tech.
+                Advanced IVR, multi-language support, and enhanced
+                searchability.
               </p>
+
+              <Button
+                text="Watch 1 Minute Video"
+                className="mt-[clamp(2rem,2.13vw,3rem)] md:mb-[60px] mb-[0px]"
+              />
             </div>
           </div>
 
           <div className="hero relative md:w-1/2 w-full h-full rounded-[32px] flex flex-col items-center justify-center">
             <img
-              src="/assets/icons/partners/spyrs.webp"
+              src="/assets/icons/partners/telus.webp"
               className="w-full h-full"
             />
           </div>
@@ -45,31 +51,31 @@ export default function LiveTransactionSummary() {
         <div className="relative container-container container-narrow">
           <div className="flex flex-col gap-10">
             <h2 className="md:text-5xl text-3xl text-center text-white font-bold">
-              Transform calls into actionable insights.
+              Improve your CX in every customer conversation.
             </h2>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
-              <LiveTransactionSummaryCard1
+              <TextToSpeechSpeechToTextCard1
                 icon={
                   <Global size={32} variant="Bold" className="text-white" />
                 }
-                title="Dual Access"
-                text="Knowledge base access is bidirectional, enabling both customers and agents to input queries simultaneously. This speeds up response times for customers and frees agents to provide more personalized support to others."
+                title="Reduced call handling time"
+                text="Transform interactions with voice tech to handle calls faster and improve customer satisfaction."
               />
-              <LiveTransactionSummaryCard1
+              <TextToSpeechSpeechToTextCard1
                 icon={
                   <Global size={32} variant="Bold" className="text-white" />
                 }
                 title="Seamless Interaction"
                 text="Real-time automatic KB searches streamline conversations by eliminating the need for agents to pause and look up information."
               />
-              <LiveTransactionSummaryCard1
+              <TextToSpeechSpeechToTextCard1
                 icon={
                   <Global size={32} variant="Bold" className="text-white" />
                 }
                 title="Enhanced Context"
                 text="Real-time KB searches combined with transcription provide contextual insights, resulting in more accurate and comprehensive conversation records."
               />
-              <LiveTransactionSummaryCard1
+              <TextToSpeechSpeechToTextCard1
                 icon={
                   <Global size={32} variant="Bold" className="text-white" />
                 }
@@ -85,9 +91,9 @@ export default function LiveTransactionSummary() {
         <div className="container-container container-narrow">
           <div className="flex flex-col items-center gap-y-12">
             <h2 className="text-center md:text-7xl text-3xl font-bold">
-              Live transcriptions saves time.
+              Scale your contact center with advanced speech technology.
             </h2>
-            <LiveTransactionSummaryToggler />
+            <TextToSpeechSpeechToTextToggler />
           </div>
         </div>
       </section>

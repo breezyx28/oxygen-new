@@ -29,7 +29,8 @@ const Navbar = () => {
     "/products/intelligent-routing-skills",
     "/solutions/enterprise-contact-center",
     "/resources/learn/knowledge-base-generative-ai",
-    "/resources/learn/live-transaction-summary",
+    "/resources/learn/live-transcription-summary",
+    "/resources/learn/text-to-speech-speech-to-text",
   ].includes(currentPath);
 
   // Close menu when scrolling

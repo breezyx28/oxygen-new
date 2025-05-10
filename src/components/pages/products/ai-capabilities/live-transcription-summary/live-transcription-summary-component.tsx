@@ -2,7 +2,7 @@ import { Airdrop } from "iconsax-react";
 import { useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-export const LiveTransactionSummaryCard1 = ({
+export const LiveTranscriptionSummaryCard1 = ({
   icon,
   title,
   text,
@@ -29,7 +29,7 @@ export const LiveTransactionSummaryCard1 = ({
   </div>
 );
 
-export const LiveTransactionSummaryCard2 = ({
+export const LiveTranscriptionSummaryCard2 = ({
   title,
   text,
 }: {
@@ -49,14 +49,14 @@ export const LiveTransactionSummaryCard2 = ({
   </div>
 );
 
-export const LiveTransactionSummaryToggler = () => {
+export const LiveTranscriptionSummaryToggler = () => {
   const [activeId, setActiveId] = useState<number>(1);
   const data = [
     {
       id: 1,
       title: "Desktop and Browser Experience",
       content: (
-        <LiveTransactionSummaryCard2
+        <LiveTranscriptionSummaryCard2
           title="Streamlined operations"
           text="Streamlining operations in contact centers is a key step toward achieving a unified customer experience. Nextiva’s features are designed to simplify complex processes, making it easier for agents to manage calls and for managers to oversee operations. This approach not only improves efficiency but also enhances the quality of service provided to customers.
   
@@ -74,7 +74,7 @@ export const LiveTransactionSummaryToggler = () => {
       id: 2,
       title: "Mobile Experience",
       content: (
-        <LiveTransactionSummaryCard2
+        <LiveTranscriptionSummaryCard2
           title="Streamlined operations"
           text="Streamlining operations in contact centers is a key step toward achieving a unified customer experience. Nextiva’s features are designed to simplify complex processes, making it easier for agents to manage calls and for managers to oversee operations. This approach not only improves efficiency but also enhances the quality of service provided to customers.
   
@@ -92,7 +92,7 @@ export const LiveTransactionSummaryToggler = () => {
       id: 3,
       title: "Conference rooms, desktop phones and headsets",
       content: (
-        <LiveTransactionSummaryCard2
+        <LiveTranscriptionSummaryCard2
           title="Streamlined operations"
           text="Streamlining operations in contact centers is a key step toward achieving a unified customer experience. Nextiva’s features are designed to simplify complex processes, making it easier for agents to manage calls and for managers to oversee operations. This approach not only improves efficiency but also enhances the quality of service provided to customers.
   
