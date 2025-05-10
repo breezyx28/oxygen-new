@@ -21,6 +21,7 @@ import AICapabilities from "./components/pages/products/ai-capabilities";
 import KnowledeBaseAI from "./components/pages/products/ai-capabilities/knowledge-base";
 import LiveTranscriptionSummary from "./components/pages/products/ai-capabilities/live-transcription-summary";
 import TextToSpeechSpeechToText from "./components/pages/products/ai-capabilities/text-to-speech-speech-to-text";
+import AIAutomation from "./components/pages/products/automation-and-productivity";
 
 const AppRouter: React.FC = () => {
   return (
@@ -69,6 +70,7 @@ const AppRouter: React.FC = () => {
             path="/products/intelligent-routing-skills"
             element={<IntelligentRoutingSkills />}
           />
+          <Route path="/products/ai-automation" element={<AIAutomation />} />
 
           {/* Solutions */}
           <Route
