@@ -54,7 +54,11 @@ const MultiToggleSwitch = ({
       <select className="w-full md:hidden block rounded-[12px] bg-gray-200 px-4 py-3">
         {options.map((option, index) => {
           return (
-            <option value={option} onClick={() => handleSelect(option)}>
+            <option
+              key={index}
+              value={option}
+              onClick={() => handleSelect(option)}
+            >
               {option}
             </option>
           );
