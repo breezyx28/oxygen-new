@@ -19,6 +19,7 @@ import IntelligentVirtualAgent from "./components/pages/products/customer-experi
 import IntelligentRoutingSkills from "./components/pages/products/customer-experince/intelligent-routing-skills";
 import AICapabilities from "./components/pages/products/ai-capabilities";
 import KnowledeBaseAI from "./components/pages/products/ai-capabilities/knowledge-base";
+import LiveTransactionSummary from "./components/pages/products/ai-capabilities/live-transaction-summary";
 
 const AppRouter: React.FC = () => {
   return (
@@ -79,6 +80,10 @@ const AppRouter: React.FC = () => {
           <Route
             path="/resources/learn/knowledge-base-generative-ai"
             element={<KnowledeBaseAI />}
+          />
+          <Route
+            path="/resources/learn/live-transaction-summary"
+            element={<LiveTransactionSummary />}
           />
         </Routes>
       </Layout>

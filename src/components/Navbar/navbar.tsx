@@ -28,6 +28,8 @@ const Navbar = () => {
     "/products/intelligent-virtual-agent",
     "/products/intelligent-routing-skills",
     "/solutions/enterprise-contact-center",
+    "/resources/learn/knowledge-base-generative-ai",
+    "/resources/learn/live-transaction-summary",
   ].includes(currentPath);
 
   // Close menu when scrolling
