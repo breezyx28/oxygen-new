@@ -28,6 +28,7 @@ const Navbar = () => {
     "/products/intelligent-virtual-agent",
     "/products/intelligent-routing-skills",
     "/products/ai-automation",
+    "/products/unified-inbox",
     "/solutions/enterprise-contact-center",
     "/resources/learn/knowledge-base-generative-ai",
     "/resources/learn/live-transcription-summary",

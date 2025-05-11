@@ -4,9 +4,10 @@ import { Play } from "iconsax-react";
 
 type BookingFormSectionProps = {
   img?: string;
+  text?: React.ReactNode;
 };
 
-const BookingFormSection = ({ img }: BookingFormSectionProps) => {
+const BookingFormSection = ({ img, text }: BookingFormSectionProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -242,15 +243,17 @@ const BookingFormSection = ({ img }: BookingFormSectionProps) => {
                         fill="#3758F9"
                       ></path>
                     </svg>
-                    <div className="w-full text-white">
-                      <h3 className="md:text-5xl text-[20px] font-[600] mb-[12px]">
-                        I'm a big fan of oxygen.
-                      </h3>
-                      <p className="md:text-xl text-lg">Steve Wozniak</p>
-                      <p className="md:text-xl text-lg opacity-50">
-                        Co-founder at Apple
-                      </p>
-                    </div>
+                    {text ?? (
+                      <div className="w-full text-white">
+                        <h3 className="md:text-5xl text-[20px] font-[600] mb-[12px]">
+                          I'm a big fan of oxygen.
+                        </h3>
+                        <p className="md:text-xl text-lg">Steve Wozniak</p>
+                        <p className="md:text-xl text-lg opacity-50">
+                          Co-founder at Apple
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

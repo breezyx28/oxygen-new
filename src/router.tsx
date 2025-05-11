@@ -22,6 +22,7 @@ import KnowledeBaseAI from "./components/pages/products/ai-capabilities/knowledg
 import LiveTranscriptionSummary from "./components/pages/products/ai-capabilities/live-transcription-summary";
 import TextToSpeechSpeechToText from "./components/pages/products/ai-capabilities/text-to-speech-speech-to-text";
 import AIAutomation from "./components/pages/products/automation-and-productivity";
+import UnifiedInbox from "./components/pages/products/automation-and-productivity/unified-inbox";
 
 const AppRouter: React.FC = () => {
   return (
@@ -71,6 +72,7 @@ const AppRouter: React.FC = () => {
             element={<IntelligentRoutingSkills />}
           />
           <Route path="/products/ai-automation" element={<AIAutomation />} />
+          <Route path="/products/unified-inbox" element={<UnifiedInbox />} />
 
           {/* Solutions */}
           <Route
