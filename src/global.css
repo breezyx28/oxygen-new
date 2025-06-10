@@ -37,17 +37,45 @@ body {
   height: 100vh;
 }
 
+.size-full {
+  width: 100%;
+  height: 100%;
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
 .container-container {
   margin: 0 auto !important;
   max-width: clamp(19.5rem, 73.3334vw, 73.359vw) !important;
+}
+.px-container {
+  margin: 0 auto !important;
+  max-width: clamp(19.5rem, 73.3334vw, 73.359vw) !important;
+}
+
+.screen-container {
+  margin: 0 auto !important;
+  max-width: clamp(19.5rem, 73.3334vw, 73.359vw) !important;
+  @apply md:py-[120px] py-[80px];
 }
 
 @utility container-narrow {
   @apply md:py-[120px] py-[80px];
 }
+@utility py-container {
+  @apply md:py-[120px] py-[80px];
+}
 
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
   .container-container {
+    max-width: 66.25rem !important;
+  }
+  .px-container {
+    max-width: 66.25rem !important;
+  }
+  .screen-container {
     max-width: 66.25rem !important;
   }
 }

@@ -23,6 +23,7 @@ import LiveTranscriptionSummary from "./components/pages/products/ai-capabilitie
 import TextToSpeechSpeechToText from "./components/pages/products/ai-capabilities/text-to-speech-speech-to-text";
 import AIAutomation from "./components/pages/products/automation-and-productivity";
 import UnifiedInbox from "./components/pages/products/automation-and-productivity/unified-inbox";
+import WorkfroceEnegement from "./components/pages/products/automation-and-productivity/workforce-engagement";
 
 const AppRouter: React.FC = () => {
   return (
@@ -78,6 +79,10 @@ const AppRouter: React.FC = () => {
           <Route
             path="/solutions/enterprise-contact-center"
             element={<EnterpriseContactCenter />}
+          />
+          <Route
+            path="/solutions/workforce-engagement"
+            element={<WorkfroceEnegement />}
           />
 
           {/* Resources */}
