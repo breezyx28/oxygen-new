@@ -9,8 +9,13 @@ import DemoSection from "../sections/demo-section";
 import InfoCardsSection from "../sections/info-card-section";
 import PartnersSlider from "../sections/partners-slider";
 import BookingForm from "../sections/booking-form";
+import { useLastMainQuery } from "@/redux/endpoints/main";
 
 export default function HomePage() {
+  const { data, isLoading } = useLastMainQuery({});
+
+  console.log("data: ", data);
+
   return (
     <>
       <Hero />
