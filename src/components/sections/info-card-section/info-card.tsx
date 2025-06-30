@@ -12,10 +12,7 @@ const InfoCard = ({ className, src, text, label }: InfoCardProps) => {
         boxShadow: "0 60px 70px 0 rgba(0,15,53,.149)",
       }}
     >
-      <img
-        src={src}
-        className="w-full h-full md:object-contain object-cover rounded-[1.5vw]"
-      />
+      <img src={src} className="w-full h-full object-cover rounded-[1.5vw]" />
     </div>
   ) : (
     <div

@@ -6,7 +6,7 @@ import ImgSliderCard from "./img-slider-card";
 import "../../../styles/partners-slider.css";
 import { useMediaQuery } from "react-responsive";
 
-const PartnersSlider = () => {
+const PartnersSlider = ({ data }: any) => {
   const sliderRef = useRef<Slider>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 5; // Total number of slides
@@ -83,7 +83,7 @@ const PartnersSlider = () => {
     ],
   };
 
-  return (
+  return data?.section_6_active ? (
     <section
       id="partner-slider"
       className="w-full md:h-screen h-auto container-narrow"
@@ -92,9 +92,9 @@ const PartnersSlider = () => {
         <div className="container-container w-full flex justify-between items-end">
           <div className="w-full">
             <h2 className="text-black md:text-[3.2rem] text-[1.875rem] md:leading-[3.4rem] leading-[1.1] font-[600]">
-              The world's best businesses deliver{" "}
+              {data?.section_6_title ?? "Loading..."}{" "}
               <span className="text-[#0b102980]">
-                amazing experiences using oxygen
+                {data?.section_6_subtitle ?? "Loading..."}
               </span>
             </h2>
           </div>
@@ -106,11 +106,11 @@ const PartnersSlider = () => {
         {isDesktop && (
           <div className="slider-container w-full">
             <Slider ref={sliderRef} {...settings}>
-              {[1, 2, 3, 4, 5].map((item: any, index: number) =>
-                index % 2 === 0 ? (
-                  <TextSliderCard key={item} />
+              {data?.section_6_slider?.map((item: any, index: number) =>
+                item.type === "text" ? (
+                  <TextSliderCard data={item} key={item} />
                 ) : (
-                  <ImgSliderCard key={item} />
+                  <ImgSliderCard data={item} key={item} />
                 )
               )}
             </Slider>
@@ -120,10 +120,15 @@ const PartnersSlider = () => {
         {isTabletOrMobile && (
           <div className="slider-container w-full">
             <Slider ref={sliderRef} {...settings}>
-              {[1, 2, 3, 4, 5].map((item: any) => (
+              {data?.section_6_slider?.map((item: any) => (
                 <div className="w-full flex flex-col gap-y-[20px]" key={item}>
-                  <ImgSliderCard />
-                  <TextSliderCard />
+                  {data?.section_6_slider?.map((item: any, index: number) =>
+                    item.type === "text" ? (
+                      <TextSliderCard data={item} key={item} />
+                    ) : (
+                      <ImgSliderCard data={item} key={item} />
+                    )
+                  )}
                 </div>
               ))}
             </Slider>
@@ -131,7 +136,7 @@ const PartnersSlider = () => {
         )}
       </div>
     </section>
-  );
+  ) : null;
 };
 
 export default PartnersSlider;

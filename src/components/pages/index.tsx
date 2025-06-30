@@ -18,14 +18,14 @@ export default function HomePage() {
 
   return (
     <>
-      <Hero />
-      <OurMission />
-      <OurApps />
+      <Hero data={data} />
+      <OurMission data={data} />
+      {data?.section_2_active ? <OurApps data={data} /> : null}
       {/* <HowItWorks /> */}
-      <FeaturesGrid />
-      <DemoSection />
-      <InfoCardsSection />
-      <PartnersSlider />
+      <FeaturesGrid data={data} />
+      <DemoSection data={data} />
+      <InfoCardsSection data={data} />
+      <PartnersSlider data={data} />
       <BookingForm />
     </>
   );

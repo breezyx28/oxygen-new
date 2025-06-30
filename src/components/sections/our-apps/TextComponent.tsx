@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 
 interface TextComponentProps {
   isInView: boolean;
+  data: any;
 }
 
-const TextComponent: React.FC<TextComponentProps> = ({ isInView }) => {
+const TextComponent: React.FC<TextComponentProps> = ({ isInView, data }) => {
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -24,11 +25,14 @@ const TextComponent: React.FC<TextComponentProps> = ({ isInView }) => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <p className="text-black text-[24px] font-[600]">Our Application</p>
+      <p className="text-black text-[24px] font-[600]">
+        {data?.section_2_title ?? "Our Application"}
+      </p>
       <h3 className="text-black text-[78px] font-[700] text-center">
-        <p className="leading-[98px]">1,150 apps</p>
+        {/* <p className="leading-[98px]">1,150 apps</p>
         <p className="leading-[98px]">405,800 screens</p>
-        <p className="leading-[98px]">81,700 flows</p>
+        <p className="leading-[98px]">81,700 flows</p> */}
+        {data?.section_2_subtitle}
       </h3>
     </motion.div>
   );

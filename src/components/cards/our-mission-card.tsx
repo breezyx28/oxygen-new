@@ -4,9 +4,10 @@ import { ArrowRight } from "iconsax-react";
 
 type OurMissionCardProps = {
   color: "white" | "purple" | "blue";
+  data: { cta: string; title: string; subtitle: string };
 };
 
-const OurMissionCard = ({ color }: OurMissionCardProps) => {
+const OurMissionCard = ({ color, data }: OurMissionCardProps) => {
   return (
     <div
       className={twMerge(
@@ -44,7 +45,7 @@ const OurMissionCard = ({ color }: OurMissionCardProps) => {
               : "mission-card-title-white"
           )}
         >
-          Unify All Customer Interactions
+          {data?.title ?? "Unify All Customer Interactions"}
         </h3>
       </div>
       <div className="flex flex-col gap-y-6">
@@ -55,12 +56,13 @@ const OurMissionCard = ({ color }: OurMissionCardProps) => {
               : "mission-card-subtitle-white"
           )}
         >
-          Meet customers where they are and serve them through any channel:
-          Voice, Live Chat, Messaging Apps, SMS, Email, Social, Reviews, Video.
+          {data?.subtitle ??
+            `Meet customers where they are and serve them through any channel:
+          Voice, Live Chat, Messaging Apps, SMS, Email, Social, Reviews, Video.`}
         </p>
         <div className="flex justify-start items-center gap-x-3">
           <a
-            href="#"
+            href={data?.cta ?? "#"}
             className={twMerge(
               "md:text-[20px] text-[16px]",
               color === "white" ? "text-black" : "text-white"

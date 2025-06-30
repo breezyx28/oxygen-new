@@ -3,7 +3,7 @@ import { useRef } from "react";
 import TextComponent from "./TextComponent";
 import IconsComponent from "./IconsComponent";
 
-const OurApps = () => {
+const OurApps = ({ data }: { data: any }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
@@ -22,8 +22,12 @@ const OurApps = () => {
       ref={sectionRef}
       className="w-full h-screen overflow-hidden relative mb-[120px]"
     >
-      <TextComponent isInView={isInView} />
-      <IconsComponent isInView={isInView} images={images} />
+      <TextComponent isInView={isInView} data={data} />
+      <IconsComponent
+        isInView={isInView}
+        images={data?.section_2_icons ?? []}
+        // images={data?.section_2_icons ?? images}
+      />
     </section>
   );
 };
