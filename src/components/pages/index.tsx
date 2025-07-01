@@ -12,7 +12,7 @@ import BookingForm from "../sections/booking-form";
 import { useLastMainQuery } from "@/redux/endpoints/main";
 
 export default function HomePage() {
-  const { data, isLoading } = useLastMainQuery({});
+  const { data } = useLastMainQuery({});
 
   console.log("data: ", data);
 

@@ -3,7 +3,7 @@ import "../../../styles/booking-form.css";
 import { useState } from "react";
 
 const BookingForm = () => {
-  const { data, isLoading } = useLastFormQuery({});
+  const { data } = useLastFormQuery({});
 
   const [formData, setFormData] = useState({
     firstName: "",

@@ -7,15 +7,15 @@ const OurApps = ({ data }: { data: any }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
-  const images = [
-    "/assets/images/achievements/Central.jpg",
-    "/assets/images/achievements/ForHer.png",
-    "/assets/images/achievements/Laki.png",
-    "/assets/images/achievements/MSound.png",
-    "/assets/images/achievements/Anti.png",
-    "/assets/images/achievements/Smart_Center.png",
-    "/assets/images/achievements/Kpsolla_Profile.jpg",
-  ];
+  // const images = [
+  //   "/assets/images/achievements/Central.jpg",
+  //   "/assets/images/achievements/ForHer.png",
+  //   "/assets/images/achievements/Laki.png",
+  //   "/assets/images/achievements/MSound.png",
+  //   "/assets/images/achievements/Anti.png",
+  //   "/assets/images/achievements/Smart_Center.png",
+  //   "/assets/images/achievements/Kpsolla_Profile.jpg",
+  // ];
 
   return (
     <section

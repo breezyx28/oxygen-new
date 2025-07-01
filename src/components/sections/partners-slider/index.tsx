@@ -106,7 +106,7 @@ const PartnersSlider = ({ data }: any) => {
         {isDesktop && (
           <div className="slider-container w-full">
             <Slider ref={sliderRef} {...settings}>
-              {data?.section_6_slider?.map((item: any, index: number) =>
+              {data?.section_6_slider?.map((item: any) =>
                 item.type === "text" ? (
                   <TextSliderCard data={item} key={item} />
                 ) : (
@@ -122,7 +122,7 @@ const PartnersSlider = ({ data }: any) => {
             <Slider ref={sliderRef} {...settings}>
               {data?.section_6_slider?.map((item: any) => (
                 <div className="w-full flex flex-col gap-y-[20px]" key={item}>
-                  {data?.section_6_slider?.map((item: any, index: number) =>
+                  {data?.section_6_slider?.map((item: any) =>
                     item.type === "text" ? (
                       <TextSliderCard data={item} key={item} />
                     ) : (

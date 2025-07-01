@@ -1,5 +1,9 @@
+import { useLastBannerQuery } from "@/redux/endpoints/banner";
+
 const AnnouncementBanner = () => {
-  return (
+  const { data } = useLastBannerQuery({});
+
+  return data?.is_active ? (
     <div className="w-full bg-[#23283e]">
       <div className="wrapper w-full flex justify-between md:items-center items-start md:px-[40px] py-[16px] px-[10px]">
         <div className="w-full">
@@ -66,7 +70,7 @@ const AnnouncementBanner = () => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default AnnouncementBanner;
