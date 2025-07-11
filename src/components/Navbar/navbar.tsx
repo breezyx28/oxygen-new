@@ -3,7 +3,6 @@ import LogoWhite from "../logo/logo-white";
 import { CaretDownIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
-import { twMerge } from "tailwind-merge";
 import Logo from "../logo/logo";
 import { MegaMenu } from "./mega-menu";
 import ProductMegaMenu from "./mega-menu-contents/product-mega-menu";
