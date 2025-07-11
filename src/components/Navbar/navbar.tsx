@@ -176,7 +176,7 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <ul className="ml-4 flex items-center gap-4">
+              {/* <ul className="ml-4 flex items-center gap-4">
                 <li>
                   <Link
                     to="#"
@@ -224,12 +224,12 @@ const Navbar = () => {
                     <span className="text-[14px]">Support</span>
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden md:flex items-center space-x-4">
-              <button
+            <div className="hidden md:flex justify-end items-center space-x-4">
+              {/* <button
                 className={classNames(
                   "px-7 py-3 rounded-full border transition-colors cursor-pointer",
                   isScrolled || WhiteNav
@@ -238,7 +238,7 @@ const Navbar = () => {
                 )}
               >
                 Log In
-              </button>
+              </button> */}
               <button
                 className={classNames(
                   "px-7 py-3 rounded-full border transition-colors bg-primary-600 text-white border-transparent hover:border-white cursor-pointer"

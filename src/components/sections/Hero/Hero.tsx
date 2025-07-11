@@ -1,10 +1,20 @@
 import GlassCards from "./glass-cards";
 import "../../../styles/hero.css";
 import TrustedBy from "./trusted-by";
+import { twMerge } from "tailwind-merge";
 
 const Hero = ({ data }: { data: any }) => {
   return (
-    <section className="relative w-full md:h-[190vh] h-auto text-white z-1">
+    <section
+      className={twMerge(
+        "relative w-full h-auto text-white z-1",
+        !data?.hero_slider_active ||
+          !data?.hero_card_1_active ||
+          !data?.hero_card_2_active
+          ? "md:h-auto"
+          : "md:h-[190vh]"
+      )}
+    >
       <div className="absolute right-0 top-0 h-full w-full">
         {/* Use next/image for optimization */}
         <div className="relative h-full">
@@ -31,7 +41,9 @@ const Hero = ({ data }: { data: any }) => {
         </div>
       </div>
       <div className="container-container">
-        <GlassCards data={data?.hero_card_1} />
+        {data?.hero_card_1_active ? (
+          <GlassCards data={data?.hero_card_1} />
+        ) : null}
         <TrustedBy data={data} />
       </div>
     </section>
